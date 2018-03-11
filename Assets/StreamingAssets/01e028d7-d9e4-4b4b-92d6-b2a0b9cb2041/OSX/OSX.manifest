@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 855318382
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: parkbattlescene
+      Dependencies: {}
+    Info_1:
+      Name: residenceinvestigatescene
+      Dependencies: {}
+    Info_2:
+      Name: investigateboxpanel
+      Dependencies: {}
+    Info_3:
+      Name: uidialogpanel
+      Dependencies: {}
+    Info_4:
+      Name: uigamecompletepanel
+      Dependencies: {}
+    Info_5:
+      Name: uigamefailpanel
+      Dependencies: {}
+    Info_6:
+      Name: uiinvestigatescenepanel
+      Dependencies: {}
+    Info_7:
+      Name: uimainmenupanel
+      Dependencies: {}
+    Info_8:
+      Name: uinotebookpanel
+      Dependencies: {}
+    Info_9:
+      Name: uiselectpanel
+      Dependencies: {}
+    Info_10:
+      Name: uilogo
+      Dependencies: {}
+    Info_11:
+      Name: investigablemark
+      Dependencies: {}

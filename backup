@@ -1,0 +1,7 @@
+<Event Name="ff" EvenOrder="0">
+  <TalkNode Name="而非" NodeType="Talk" Background="Background" Tachie="Background">
+    <TalkContent Background="0" Tachie="0" Name="饭" Content="粪" />
+    <TalkContent Background="0" Tachie="0" Name="s" Content="d" />
+    <TalkContent Background="0" Tachie="0" Name="dw" Content="d" />
+  </TalkNode>
+</Event>
