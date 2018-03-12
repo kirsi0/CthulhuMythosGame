@@ -1,0 +1,17 @@
+<DialogWriter>
+  <Event Name="first" EvenOrder="0">
+    <TalkNode Name="meet" NodeType="Talk">
+      <Background Name="10" />
+      <Background Name="Panel" />
+      <Tachie Name="9" />
+      <Tachie Name="exit" />
+      <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="我们已经到达了目标地点，看起来是个不祥的地方。" />
+      <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="或许有一些我们从未见过的邪恶力量依旧盘踞在这。" />
+      <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="当是我们会击败它们，就和过去一样。" />
+      <TalkContent Background="0" Tachie="0" Name="游戏教程" Content="这是一款回合制战棋游戏，双方有一定的行动点，行动点耗尽之后就会变成敌人的回合。" />
+      <TalkContent Background="0" Tachie="0" Name="游戏教程" Content="请注意，您拥有两名调查员，金色头发的爱丽丝和浅蓝的头发的汉赛尔。爱丽丝拥有能让自身行动点增加两点的“鼓舞”技能，但是她的战斗能力却弱于汉赛尔。" />
+      <TalkContent Background="0" Tachie="0" Name="游戏教程" Content="您可以使用鼠标点击或者按键操作，消灭潜伏在黑暗中的敌人，获得最终的胜利吧。" />
+      <TalkContent Background="0" Tachie="0" Name="游戏教程" Content="最后是最重要的一点：不论遇到什么问题，您可以使用T打开游戏提示，其中具体描述了游戏的所有操作，请根据其中的提示来进行游戏吧。" />
+    </TalkNode>
+  </Event>
+</DialogWriter>

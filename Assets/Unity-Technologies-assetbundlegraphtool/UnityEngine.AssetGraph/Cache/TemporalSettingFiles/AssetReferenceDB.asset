@@ -1,0 +1,2129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
+  m_Name: AssetReferenceDB
+  m_EditorClassIdentifier: 
+  m_assets:
+  - m_assetDatabaseId: ca7c325a2073040ce879afb387368cce
+    m_importFrom: Assets/AssetGraph/AssetGraph.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61d380ece70d3434f877ecd1302067f8
+    m_importFrom: Assets/AssetGraph
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b224ca333cb5a4d1db5d5e7f90cc7edc
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c97d80529b004d38ac4e1ed7ce54e2c
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/TemporalSettingFiles
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 574a1fe71a12f49a4b75d1ad6fbbcd5a
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 59c71df8bbeda4a1a994a635b0aa6675
+    m_importFrom: Assets/AssetBundleManager/Editor/AssetBundleServer.exe
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 412195e63b8901646adb12ef3f33f415
+    m_importFrom: Assets/AssetBundleManager/Resources/AssetBundleServerURL.bytes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1844f9ab5de6f44184abe3889423fb8
+    m_importFrom: Assets/Images/bag.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: def0fbafecab5fa448317a455114ea05
+    m_importFrom: Assets/Images/book.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: daf692cfb716a4202a471375fb89fceb
+    m_importFrom: Assets/Images/CthulhuLogo.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1ac8cae4d99c9054ea7d3cb95cdd1728
+    m_importFrom: Assets/Images/daoju1.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2396a0d864422274c83b587f71cc51fb
+    m_importFrom: Assets/Images/daoju2.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 39226487f47f6e04abef2eb074581019
+    m_importFrom: Assets/Images/daoju3.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c311ab51b328bf64d93d7353a99f61cf
+    m_importFrom: Assets/Images/exit.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f3ced24becffc4ddf9abc9f3e337127e
+    m_importFrom: Assets/Images/MainPage.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71d2bb83b50ce59458b2d2f8ef16cc21
+    m_importFrom: Assets/Images/Panel.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a930fcef5a62e4f20a4a771c747edefe
+    m_importFrom: Assets/Models/Blocks/BasicBlock.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4a29fba65f97b4e9782dc7251b4567fd
+    m_importFrom: Assets/Models/Blocks/BasicBlock.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 272b58a49705440758a8a1f45f121096
+    m_importFrom: Assets/Models/Blocks/BasicBlock.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c7c962987e3f64429c02fb48b59a1b7
+    m_importFrom: Assets/Models/Blocks/benchA.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b03be221b349594cb90a4f2da184880
+    m_importFrom: Assets/Models/Blocks/benchA.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f4b3d2698ad0d64ca298ce855181f8f
+    m_importFrom: Assets/Models/Blocks/benchA.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1f5031312c80d144583a1376668c2e07
+    m_importFrom: Assets/Models/Blocks/benchB.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ac15d0f116f7dfc4e86b7f274d966f5d
+    m_importFrom: Assets/Models/Blocks/benchB.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 43be64c9722bb574897867b0fc441a43
+    m_importFrom: Assets/Models/Blocks/benchB.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04fd39c957072406fbebc3cff9977ca2
+    m_importFrom: Assets/Models/Blocks/bush.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 322896192ce7b4b51b874f663aa86486
+    m_importFrom: Assets/Models/Blocks/bush.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09837b236cfae4d4799bab0c01e7ed8d
+    m_importFrom: Assets/Models/Blocks/bush.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 717bbc59d688941d8b5f38bc27b4f79c
+    m_importFrom: Assets/Models/Blocks/chr_old.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a7c7ba904a71b4a0ea112d38c7cf5a5d
+    m_importFrom: Assets/Models/Blocks/chr_old.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a68e282ed60534733b3f7934a1b2be7e
+    m_importFrom: Assets/Models/Blocks/chr_old.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2f20cda4d13904d018c344ee2cf18457
+    m_importFrom: Assets/Models/Blocks/chr_rain.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6168d86024d54658a0f30db5c16d97c
+    m_importFrom: Assets/Models/Blocks/chr_rain.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e5d77fd4db4c404a920eb7118efe6a9
+    m_importFrom: Assets/Models/Blocks/chr_rain.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9cc03836c1a74289afe0169bb3e3249
+    m_importFrom: Assets/Models/Blocks/chr_sword.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d05df578b73304185ae896f29bc12302
+    m_importFrom: Assets/Models/Blocks/chr_sword.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5778735eb534a428f89f5ae364adfea9
+    m_importFrom: Assets/Models/Blocks/chr_sword.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: edc5fb6f948ae447789bef8c583134b5
+    m_importFrom: Assets/Models/Blocks/daguaiguai.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d56c32cae2864fa4be632238ed9edf9
+    m_importFrom: Assets/Models/Blocks/daguaiguai.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49585317176174c9e8331280ff43e67c
+    m_importFrom: Assets/Models/Blocks/daguaiguai.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 623d720e09be63044a6cae4c652e5e9d
+    m_importFrom: Assets/Models/Blocks/deskA.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 93c6ef8f0f932bf418e9bf90960e8676
+    m_importFrom: Assets/Models/Blocks/deskA.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb5a24fc43fa3a24eb85b4cb0817e202
+    m_importFrom: Assets/Models/Blocks/deskA.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2dfc1e8c305eb1d469e0003997732679
+    m_importFrom: Assets/Models/Blocks/deskB.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30e2fa00e016e67478df9dd3f6208204
+    m_importFrom: Assets/Models/Blocks/deskB.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 384c5177d5d810b47beba9e58522a2ad
+    m_importFrom: Assets/Models/Blocks/deskB.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e6a6a7bd6eb654b23adf558cced4b533
+    m_importFrom: Assets/Models/Blocks/glssland.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c7b582be8de44140a31e4b1e230adbd
+    m_importFrom: Assets/Models/Blocks/glssland.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0a438a53626f64fb58dea1b96d38a6dd
+    m_importFrom: Assets/Models/Blocks/glssland.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 63a4a3572e5a87744a473220283fe9b1
+    m_importFrom: Assets/Models/Blocks/Hacker/Controller.controller
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0519dd507851d34fa2ef95f84e5b96a
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_attack.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 70b95ae2633db1144925d926bc17cbff
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_attack.fbm/hacker.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 464819d0ff418f94c8336fb20353fdb9
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_die.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f329a21985a0d7c4db10112e6a0d0c14
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_die.fbm/hacker.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4d8bd517c9d833f4c9e60f8b3cd12f29
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_gethit.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c993e51e49ab0b4eba279430692c229
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_gethit.fbm/hacker.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 163e25ee819d3e648951090f895b1437
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_walk.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 039ba1b8c3c0c5340a26ef2f5a6e8fad
+    m_importFrom: Assets/Models/Blocks/Hacker/hacker_walk.fbm/hacker.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e061d42250c4ffb49a679a201cf65354
+    m_importFrom: Assets/Models/Blocks/Hacker/Materials/hacker.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9748a227a3c41ce49a80d276e8dd7bf2
+    m_importFrom: Assets/Models/Blocks/hacker.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b705b193ee2454e6d832199d87ebe15f
+    m_importFrom: Assets/Models/Blocks/jiuping.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d549283d01d3450f94299b5830d2df2
+    m_importFrom: Assets/Models/Blocks/jiuping.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: facafec2f31bc244b84a75fe28d21ae0
+    m_importFrom: Assets/Models/Blocks/Materials/benchAMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 63c088920b64aca48bcb6f7bfae569f4
+    m_importFrom: Assets/Models/Blocks/Materials/benchBMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7d032812a9d2b546b2ed14acfa79cb2
+    m_importFrom: Assets/Models/Blocks/Materials/Blue.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 12e9a156fece13745aa92f3c30bb8c1d
+    m_importFrom: Assets/Models/Blocks/Materials/defaultMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 78571112cb1961a4a991206a6fe5ba98
+    m_importFrom: Assets/Models/Blocks/Materials/deskAMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfdfcefee7ba194488adef740805fee4
+    m_importFrom: Assets/Models/Blocks/Materials/deskBMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a64d686c98976c458980be9c5fc5ba1
+    m_importFrom: Assets/Models/Blocks/Materials/Green.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8365be66900e4da41927f7e695ceb80b
+    m_importFrom: Assets/Models/Blocks/Materials/monitorAMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 99b62b378b8d8e7498207fc7f71ab28d
+    m_importFrom: Assets/Models/Blocks/Materials/monitorBMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 33bba0d93a99f5d4b91685467d2b775b
+    m_importFrom: Assets/Models/Blocks/Materials/monitorCMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0db94d7a178f04741ad894796c0a4705
+    m_importFrom: Assets/Models/Blocks/Materials/palette.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d05926c3689a51443805e57b9f2d4f9d
+    m_importFrom: Assets/Models/Blocks/Materials/Red.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 44f34665b661c4cf58e240df96cadc66
+    m_importFrom: Assets/Models/Blocks/Materials/roadMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fab34ee1a84b9419e94e529279665fa9
+    m_importFrom: Assets/Models/Blocks/Materials/stone_tabletMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b425241046b97574bbbbea2b1a2e1af4
+    m_importFrom: Assets/Models/Blocks/Materials/stonechairMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f226e45f76fb7d499537fb2d3e007d2
+    m_importFrom: Assets/Models/Blocks/Materials/stonedeskMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c42ed975ab9b92488b5666a5f234167
+    m_importFrom: Assets/Models/Blocks/Materials/treeMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09789cf24788c49f2bca14708b3e368f
+    m_importFrom: Assets/Models/Blocks/Materials/wall2Mat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71623eb91d236364f901fa10fb7e2daf
+    m_importFrom: Assets/Models/Blocks/Materials/waterMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 663ba2ec8b09fb945830c9cdfe7980cd
+    m_importFrom: Assets/Models/Blocks/monitorA.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bf3bf03f565f474d8c7307ee632b67e
+    m_importFrom: Assets/Models/Blocks/monitorA.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb585d5645fca804183af4c6fee7936d
+    m_importFrom: Assets/Models/Blocks/monitorA.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58202741130127c4d8b8538d7fdb02a7
+    m_importFrom: Assets/Models/Blocks/monitorB.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2093518cd961c44ba705c04626f6c81
+    m_importFrom: Assets/Models/Blocks/monitorB.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a1f9d8b42fbbfd94b9c4b358f40fbe3c
+    m_importFrom: Assets/Models/Blocks/monitorB.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8e0ccc8ce0af0246a74a421141cdb1b
+    m_importFrom: Assets/Models/Blocks/monitorC.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: acb9955accb0cfb4e96c0b59be3a4f64
+    m_importFrom: Assets/Models/Blocks/monitorC.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1248bb1cabc681b4a8d2f8ecef68a09f
+    m_importFrom: Assets/Models/Blocks/monitorC.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4ed3aaa640bbba458c54e541efbe739
+    m_importFrom: "Assets/Models/Blocks/Old Soldier/A\u0300I\u0308\xB1\xF8\xD0\xD0\xD7\xDF/old
+      solidier2.png"
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6643b0eade807f749be67c814bb9369e
+    m_importFrom: "Assets/Models/Blocks/Old Soldier/A\u0300I\u0308\xB1\xF8\xD0\xD0\xD7\xDF/old_soldier_walk.FBX"
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f1ff9699727862043bca0a79067352c0
+    m_importFrom: "Assets/Models/Blocks/Old Soldier/A\u0300I\u0308\xB1\xF8\xD0\xD0\xD7\xDF/old_soldier_walk.fbm/old
+      solidier2.png"
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9985094772904874b9f69f13676a893c
+    m_importFrom: Assets/Models/Blocks/Old Soldier/controller.controller
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e82145510935e49eeb55fc207b8098f5
+    m_importFrom: Assets/Models/Blocks/Old Soldier/Materials/old solidier2.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c53a601b797084f9a8160344907694f1
+    m_importFrom: Assets/Models/Blocks/Old Soldier/Materials/old_solidier2Mat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f3711ecad567848729c477be6a1633e4
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old solidier2.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 74a0f77f57518244f978eb67f26c4740
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_attack.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5618dd7b5eface8419cd12bcc64b1459
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_attack.fbm/old solidier2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8f15756fe52d3c04d9895d4b6b3281c1
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_die.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea8f78250c7a49948914980f6983b196
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_die.fbm/old solidier2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 01be41c635925a748a64da3737d0fc91
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_gethit.FBX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b841e10139a62f49a9b51564dc89ff5
+    m_importFrom: Assets/Models/Blocks/Old Soldier/old_soldier_gethit.fbm/old solidier2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4776c3e2b4564ad7a2ed29350943bbc
+    m_importFrom: Assets/Models/Blocks/road.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 665c65e0aba6b4acbae158394bb9e744
+    m_importFrom: Assets/Models/Blocks/road.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 84addfa8bb2c940909ea83d4f6661b1c
+    m_importFrom: Assets/Models/Blocks/stone tablet.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7404c01df5f034853a53edb774a9a145
+    m_importFrom: Assets/Models/Blocks/stone tablet.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c5556273513e4ec5889eb8e02001f31
+    m_importFrom: Assets/Models/Blocks/stone tablet.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5aea361f6f431394d83668f46a706c0a
+    m_importFrom: Assets/Models/Blocks/stonechair.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 783d820a5ad96f540b0a6c1685541a5f
+    m_importFrom: Assets/Models/Blocks/stonechair.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 730b5bf87f13b3045b10fa4fe0259dff
+    m_importFrom: Assets/Models/Blocks/stonechair.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 338c3910aa257bd4caadc0fe11c810dc
+    m_importFrom: Assets/Models/Blocks/stonedesk.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61b8621753dc92842b8cf9263a16f6d6
+    m_importFrom: Assets/Models/Blocks/stonedesk.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c200e3171197c83468aa1e834fd0039c
+    m_importFrom: Assets/Models/Blocks/stonedesk.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8302cc64bc3e7b440b06d8792737e004
+    m_importFrom: Assets/Models/Blocks/tree.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fafdef3991bf59b4a8ebd18ca1a9d6bd
+    m_importFrom: Assets/Models/Blocks/tree.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dac0c5556d6291b4e8612dbdd4d1b9a8
+    m_importFrom: Assets/Models/Blocks/tree.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 865a9e307916f4de5b68b89981898362
+    m_importFrom: Assets/Models/Blocks/wall.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 14bd259ea3de246deb6e030af7067451
+    m_importFrom: Assets/Models/Blocks/wall.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04cfe78a88f894da19295fa691d1f403
+    m_importFrom: Assets/Models/Blocks/wall2.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b07860402aef8b8409cd8e69c6a28ab6
+    m_importFrom: Assets/Models/Blocks/water.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 77feea6d9888a0a4688773f572acbe79
+    m_importFrom: Assets/Models/Blocks/water.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8832c93116cef5643967210c9bf013d7
+    m_importFrom: Assets/Models/Blocks/water.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae39069c69b24409f80dcea6937c3f30
+    m_importFrom: Assets/Models/Blocks/xiaoguaiguai.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8cb7675caad6d438a90b58f3af8db7c1
+    m_importFrom: Assets/Models/Blocks/xiaoguaiguai.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d12b9d23c51454a8391219156c1387f5
+    m_importFrom: Assets/OutputXml/DialogWriter.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 74e3be7c163d29b4eb13e42e3b093ebc
+    m_importFrom: Assets/Plugins/DOTween/DOTween.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cf3dd5efc3432364095957779d7b010e
+    m_importFrom: Assets/Plugins/DOTween/DOTween.XML
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a822f180e0d1cbd458073187a6ba2f32
+    m_importFrom: Assets/Plugins/DOTween/DOTween.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 96124212a8a434c4baaaff8cf6006657
+    m_importFrom: Assets/Plugins/DOTween/DOTween43.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bee01d69fe6a7fe40b5abe7cf7256796
+    m_importFrom: Assets/Plugins/DOTween/DOTween43.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: daa90d7807e5d524ea1efa4d20b2de6f
+    m_importFrom: Assets/Plugins/DOTween/DOTween43.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8ed16847182ba54a87976a09be8767b
+    m_importFrom: Assets/Plugins/DOTween/DOTween46.pdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e533a471b73bc124e9b533b673c8fcde
+    m_importFrom: Assets/Plugins/DOTween/DOTween46.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 11b4db111ab0d92449c73aa232309358
+    m_importFrom: Assets/Plugins/DOTween/DOTween46.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cefc8c9f88432a4691eda55a1455277
+    m_importFrom: Assets/Plugins/DOTween/DOTween46.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 244f321fc1b65154cb9485465856c92f
+    m_importFrom: Assets/Plugins/DOTween/DOTween50.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 77cae47a46077594587f7b82623ca74c
+    m_importFrom: Assets/Plugins/DOTween/DOTween50.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 305308bb99989414fa15ec8e339b70b0
+    m_importFrom: Assets/Plugins/DOTween/DOTween50.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 38810da415702fd4aab9977b3df97710
+    m_importFrom: Assets/Plugins/DOTween/Editor/DOTweenEditor.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 333ef51bd34e0c0438c797c940a9deca
+    m_importFrom: Assets/Plugins/DOTween/Editor/DOTweenEditor.XML
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f929731679d404d4b90d263876b12043
+    m_importFrom: Assets/Plugins/DOTween/Editor/DOTweenEditor.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4ed8201294efcdc418e9a28b8a7c718d
+    m_importFrom: Assets/Plugins/DOTween/Editor/Imgs/DOTweenIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bc517d9bee912274899c614a39b2aada
+    m_importFrom: Assets/Plugins/DOTween/Editor/Imgs/Footer.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 60fadf5ced9d98e4ba59c9215cc3523a
+    m_importFrom: Assets/Plugins/DOTween/Editor/Imgs/Footer_dark.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ecb47b61c64c5f046ae933668cbe0d03
+    m_importFrom: Assets/Plugins/DOTween/Editor/Imgs/Header.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2200fef415aaf7c4fb2c6ed8a09c4986
+    m_importFrom: Assets/Plugins/DOTween/readme.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9eb99094f2c4eb74bbe8d3aca4f56695
+    m_importFrom: Assets/Prefabs/Main Camera.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c2dccbe54174e49bfa1021af9e4b0fff
+    m_importFrom: Assets/Prefabs/Scenes/ParkBattleScene.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 59c75f79d48314d01a41d491b5391c45
+    m_importFrom: Assets/Prefabs/UI/Dialog/UILogo.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d515b25f44c0e4109a5f61f920ce7a23
+    m_importFrom: Assets/Prefabs/UI/Panel/UIDialogPanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68c004db393da483ab149df4c192a689
+    m_importFrom: Assets/Prefabs/UI/Panel/UIGameCompletePanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 56fd6b87f557c4d9ea231548934e12f1
+    m_importFrom: Assets/Prefabs/UI/Panel/UIGameFailPanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 395a10973c5474528b4b919c9134e923
+    m_importFrom: Assets/Prefabs/UI/Panel/UIMainMenuPanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f712aa88e9dee3049b34609a1874e60c
+    m_importFrom: Assets/Prefabs/UI/Simple/blue.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 33041f05470a306419752af76a38cbaf
+    m_importFrom: Assets/Prefabs/UI/Simple/green.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bc15e1eccc334a3439da6b19812fd6a1
+    m_importFrom: Assets/Prefabs/UI/Simple/red.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e42022298da9ca64b97055dc9d06bbaf
+    m_importFrom: Assets/Resources/9.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 31b987bef0b41054fafc1fc51c4de2dc
+    m_importFrom: Assets/Resources/AbilityBoard.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b10a482c889ba5044affc182df920ab3
+    m_importFrom: Assets/Resources/Attack.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4e0b341163cb11e4cbcb63d88d19e63e
+    m_importFrom: Assets/Resources/Bottle.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20741f410f2713d41afba1060dfc99fe
+    m_importFrom: Assets/Resources/CheerUp.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 858c30dc7ad71884a9450fec09331bd0
+    m_importFrom: Assets/Resources/HealthPotion.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fb529b2536d40b4cb7b0e2fbd59dbe2
+    m_importFrom: Assets/Resources/Image/Attack.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae09c0770f6c8de4b94e2ccab4e57afd
+    m_importFrom: Assets/Resources/Image/blood.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 509a027cd1396754cb3c5721ffb74531
+    m_importFrom: Assets/Resources/Image/BloodBlockGreen.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1044254b54f9954b96eee3f2bce865d
+    m_importFrom: Assets/Resources/Image/BloodBlockRed.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2563a64db377eb44ab9c0e41b8d9eaa
+    m_importFrom: Assets/Resources/Image/CheerUp.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ca4473f9ff813f84cbc1233344a53cbb
+    m_importFrom: Assets/Resources/Image/Knock.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4dd035d01bd1cfc41a845ae975254603
+    m_importFrom: Assets/Resources/Image/Move.gif
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e096302b73af8f0408990deb4ded8762
+    m_importFrom: Assets/Resources/InfoBg.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: de45bf721221d7c42834671700873ee0
+    m_importFrom: Assets/Resources/Knock.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b811bbf7b2dab5543a56772e0b939f44
+    m_importFrom: Assets/Resources/Move.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 356f5471fe14e90468bbc7e593de05c3
+    m_importFrom: Assets/Resources/Music/9546.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f990edb16b07bc7408296b8c7ed70b87
+    m_importFrom: Assets/Resources/Music/9604.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e72eed535af1e924998d6a9a9364ddde
+    m_importFrom: Assets/Resources/Music/9660.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 80bef2feb6ef64d0495db7d8db265c87
+    m_importFrom: Assets/Resources/Music/BGM.mp3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e9e2d060f30a3894588ca9444bbe3836
+    m_importFrom: Assets/Resources/Music/walk.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 055cd08baf6c12f4f921744aa56df3c8
+    m_importFrom: Assets/Resources/Prefabs/Scenes/ParkBattleScene.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e81883398e438234183ef8717126bbba
+    m_importFrom: Assets/Resources/Prefabs/UI/Dialog/UILogo.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9345ac48a6e3d434b8a9b600548099ea
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/BloodSlider.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cbfb113d81aeca849a985c0f9a90f1b9
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/Canvas.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f962ae80d212c3f49bc36a19fcab7456
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/Condition.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 793a2057d9c837449b317b88ea8d8b82
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/Skill.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: abd593e2246673041b013b5abd42ebca
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UIBag.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6dda7a6b0403c1b4e9f6c5f0ff96bcb6
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UICondition.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8a72a776fd51f734f9ae39f683c207b0
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UIMainMenu.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9275a186f9f261e40a967589327bbfe2
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UIPropety.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 038af7b2f259eba42a8b172b87cae010
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UISkill.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7d738db7b0d6b541b19515b9dc40019
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UITips.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 55057697ba35c1c46ae42ac47e3db901
+    m_importFrom: Assets/Resources/Prefabs/UI/Panel/UITurn.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c3c62b45bf7f0b048a0b41be590dba98
+    m_importFrom: Assets/Resources/Prefabs/UI/Simple/blue.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b22209881d91e7d46bd38a2a648c06ea
+    m_importFrom: Assets/Resources/Prefabs/UI/Simple/green.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eba81981f720fa74eb5637dc6997b0d6
+    m_importFrom: Assets/Resources/Prefabs/UI/Simple/red.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7cb4f5f095324efea5154fbe7b5ccf9
+    m_importFrom: Assets/Resources/UI/Background/ButtonBackground.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1f4f36a803f33479482181c7fbb78a3a
+    m_importFrom: Assets/Resources/UI/Background/TalkBackground.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d7fef98dea14345c79704c13afaf71bc
+    m_importFrom: Assets/Resources/UI/Background/TalkerName.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30a03bea27068460bb616e4a6ada19c9
+    m_importFrom: Assets/Resources/UI/Tachie/1487744152-1575013499.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f1d8bfad41e1b4d4e94a1d4a1fb1fb6b
+    m_importFrom: Assets/Resources/WhiteFill.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a43fdc8b218d4c61a90415dee994543
+    m_importFrom: Assets/Scenes/BattleScenes/ParkBattleSceneEditor.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5c0b8f2a6a18e04bb57fc53225806fb
+    m_importFrom: Assets/Scenes/BattleScenes/ParkBattleSceneEditor/OcclusionCullingData.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d564d01f209f14e63a4a88ee9ce61598
+    m_importFrom: Assets/Scenes/GameRoot.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 36b37c03a707c4a449773659fcbc0c0c
+    m_importFrom: Assets/Scenes/Logo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a953ef4f8d1e468ca8ee3fe0f1f0122
+    m_importFrom: Assets/Scenes/MainMenuEditor.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b12578024ff1d4e64af770b1c87fc4c3
+    m_importFrom: Assets/Scenes/UIEditor.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5401191c1440b294aaa32c0c975fb5d6
+    m_importFrom: Assets/Shaders/FogOfWarBlur.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: de59591eb7a71f742a1a396afaf86032
+    m_importFrom: Assets/Shaders/FogOfWarEffect.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69cd10644ad669041a605b7236c413c6
+    m_importFrom: Assets/Simple Health Bar/Sprites/BloodBoard.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e817c27f69a8f3d4092f9e84d8a39732
+    m_importFrom: Assets/Simple Health Bar/Sprites/Double Bar.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2673cf64155f08c4e847edde1c08f8c1
+    m_importFrom: Assets/Simple Health Bar/Sprites/Fancy Bar.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 99302d0e5d121674897d77a16da5f04c
+    m_importFrom: Assets/Simple Health Bar/Sprites/Simple Bar.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0f7c79d821c7512468188e47e8084aba
+    m_importFrom: Assets/Skyunion/NetService/protobuf-net/Web/TODO.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 59dbf48a39d8948ae86fd7873ef39b95
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/docs/html/manual_images/top.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea2ec635566ab46ce95618fb8072a36b
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/docs/index.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 887f8f9697ffc4ec3abc760dcb5d8262
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/Doxyfile
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 92bf7346abc8049dbac6b10810d70bd0
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/LICENSE
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8836c99e56667417bb066cd94bd2a9cb
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/README.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 508aab354ca484ece8f527bf71034bf7
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/ad99cb2d-017a-420a-a3c3-cf5bd6c6d3fd/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aa473a28e004743868b2c18d7bc205d7
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aff4a9bd0cf564d4b9deba39977260b9
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/ad99cb2d-017a-420a-a3c3-cf5bd6c6d3fd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6666eaf9c9b384059977743d14b00188
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b091b79a586384a14b40a26303f07e84
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/f4639370-487b-46d9-8795-31b3167be518/StandaloneOSXIntel64
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3adc0a0b3792d49408fb1921dce7724a
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/f4639370-487b-46d9-8795-31b3167be518
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a9b92d7b018384d84895a2fbddcb6886
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/f4639370-487b-46d9-8795-31b3167be518/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ec069dd7f91ee4f4db91106fddadac45
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/29759ddc-d07c-4d1b-a5b2-70ab3faac76f/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e734a6ffd96fe429eb4203d5eaef2e11
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/29759ddc-d07c-4d1b-a5b2-70ab3faac76f
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8424df49919ca4901a9301c638210d7a
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/29759ddc-d07c-4d1b-a5b2-70ab3faac76f/StandaloneWindows
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b2cc20ee33eb74f97a458635826957b7
+    m_importFrom: Assets/StreamingAssets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a8d5ba65751024a18a417a965e30af65
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/d04c627a-4c38-4ef7-b2be-7a3da7117a43/2147483647(deprecated)
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52b545f8be93a4a1eb171ccf6283fadf
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/d04c627a-4c38-4ef7-b2be-7a3da7117a43
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be9a9d6f50756475db51e837f1c9d67c
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8af8cbf86e16247a9909ef52953b87cc
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/cf2be1fa-22f7-47e8-8eb7-fd89734d7ebe/2147483647(deprecated)
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb3d1f6d059cb4e8f8026da6aed6136b
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/cf2be1fa-22f7-47e8-8eb7-fd89734d7ebe
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 67355e40ddf3444daaea38c282078ec6
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/88b8f835-7835-432e-bf38-af2cb1217b36
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9dec0481251594418aee418e09ed4f1a
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/88b8f835-7835-432e-bf38-af2cb1217b36/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b5c1a3247f8542799040981e4d653da
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/88b8f835-7835-432e-bf38-af2cb1217b36/StandaloneOSXIntel64
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e1377b0a2698e48b6b4ccf1ff2d46e47
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetBundleBuildMap.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1998277b15b54d5ea856ac0d776c0e5
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/425ed40e-6296-4194-9c0b-01bc36bd4452
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a4ac9ede125141e595bf04c20f0b765
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/425ed40e-6296-4194-9c0b-01bc36bd4452/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b432594fb135d4ae18bed9abb4b88d26
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/Prefabs/425ed40e-6296-4194-9c0b-01bc36bd4452/StandaloneOSXIntel64
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6d42e3b1202fe4ff4a72ffdae0e03594
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/2147483647(deprecated)
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2938f8c5d2f6a456d9b83d547383092f
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/bundle_0
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/bundle_0
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/bundle_0.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/bundle_0.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000008000000000000000
+    m_importFrom: ProjectSettings/DynamicsManager.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000005100000000000000
+    m_importFrom: ProjectSettings/Physics2DSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5554b567241144442b7fb59a3b0317a1
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetProcessEventRecord.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f1bf8f79fcfc458da99e39f3cf139e0
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 43543519e590e4155a824d4f4be9a137
+    m_importFrom: Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f759448a153de4b2ba6e5df4301376fb
+    m_importFrom: Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/u
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/u.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/un
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/un.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uni
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uni.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unit
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unit.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity.
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity..manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/s.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/s.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/sc.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/sc.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/sce.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/sce.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scen.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scen.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scene.unity3d
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scene.unity3d
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scene.unity3d.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/scene.unity3d.manifest
+    m_variantName: 
+  - m_assetDatabaseId: ab73296749b6540929d65034f8eb248c
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/a52001bb-bf52-46fd-8f22-a71aac93d7c4
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e0175aca29064568b43699e9a3ab16b
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/GeneratedAssets/a52001bb-bf52-46fd-8f22-a71aac93d7c4/2147483647
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3d.
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/unity3d..manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/u.unity3d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/u.unity3d.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/ui.unity3d
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/ui.unity3d
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/ui.unity3d.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/ui.unity3d.manifest
+    m_variantName: 
+  - m_assetDatabaseId: c35701d406147446f8ecf6cc4039a94b
+    m_importFrom: Assets/Scripts/Utility/DontDestroy.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 099fb218e5d7ba84ba525eb8b5e035a7
+    m_importFrom: Assets/Skyunion/AssetsManager/AssetsManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000006100000000000000
+    m_importFrom: ProjectSettings/GraphicsSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fcdf252cf2d409f41af4421e25d2e9e9
+    m_importFrom: Assets/Skyunion/UIManager/UIDialogPanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e171036b114074b75a6571463fed2ebe
+    m_importFrom: Assets/Scripts/UI/Menu/UIGameCompletePanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e14a6185d8bbe4a7f9fbe08fac531d92
+    m_importFrom: Assets/Scripts/UI/Menu/UIGameFailPanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66e1b40828bd44bd58f34779464edb5a
+    m_importFrom: Assets/Scripts/UI/Dialog/UIDialogPanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3bc2e6b2d50474adc8a42af583f5bcfc
+    m_importFrom: Assets/Scripts/UI/Menu/UIMainMenuPanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a0f7f18461a6d27488d2181693fd0a98
+    m_importFrom: Assets/Scripts/UI/Dialog/UILogo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dd3fa796e1b16451d8a57654bc2a6991
+    m_importFrom: Assets/Scripts/System/StateSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6e7319db7acf44ed38009aeb7bde4d47
+    m_importFrom: Assets/Scripts/UIManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uidialogpanel
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uidialogpanel
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uidialogpanel.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uidialogpanel.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamecompletepanel
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamecompletepanel
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamecompletepanel.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamecompletepanel.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamefailpanel
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamefailpanel
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamefailpanel.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uigamefailpanel.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uimainmenupanel
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uimainmenupanel
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uimainmenupanel.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uimainmenupanel.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uilogo
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uilogo
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uilogo.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/uilogo.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000004000000000000000
+    m_importFrom: ProjectSettings/ProjectSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/parkbattlescene
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/parkbattlescene
+    m_variantName: 
+  - m_assetDatabaseId: 
+    m_importFrom: Assets/Unity-Technologies-assetbundlegraphtool/UnityEngine.AssetGraph/Cache/AssetBundles/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/parkbattlescene.manifest
+    m_exportTo: /Users/cookie/Documents/UnityProjectFolder/CthulhuMythosGame/Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/parkbattlescene.manifest
+    m_variantName: 
+  - m_assetDatabaseId: 3db6eee2ff3534c98b534e4f2fa7a784
+    m_importFrom: Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX.manifest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cc088c47adfc847c7b78b8349a8000cc
+    m_importFrom: Assets/StreamingAssets/01e028d7-d9e4-4b4b-92d6-b2a0b9cb2041/OSX/OSX
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c6f67513f34d44009755fc1322ff82c
+    m_importFrom: Assets/StreamingAssets/Scenes
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be9dcacfbb36e430e99a6017667d9297
+    m_importFrom: Assets/StreamingAssets/UI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c10dba8d5ec4c42199abb50c46774596
+    m_importFrom: Assets/StreamingAssets/UI/Dialog
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 845b3ba5970604900b33bb87dc8d1d35
+    m_importFrom: Assets/StreamingAssets/UI/Panel
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 32c4e30247e28441b999cc45c5f8f2ae
+    m_importFrom: Assets/Scenes/InvestigateScene
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da99462972c9b41ce8b1e9c2e09bd6bf
+    m_importFrom: Assets/Scenes/InvestigateScene/RsidenceInvestigateSceneEditor.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ab5143ea9ffe4896b75e92355c72d3f
+    m_importFrom: Assets/Models/Investigate/Materials/palette.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25a04702d4e894eb9889f8eeea47b23f
+    m_importFrom: Assets/Models/Investigate/Floor.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b23abb7466a3a46528275de0712b533a
+    m_importFrom: Assets/Models/Investigate/Floor.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18af815e880c2496c96012881a3bac9a
+    m_importFrom: Assets/Models/Investigate/Floor.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cd30e3a43aa38407b9cbf28e6995e95e
+    m_importFrom: Assets/Images/HanselPatriot.jpeg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb80c8e5cb42b4614978dcfa418d6756
+    m_importFrom: Assets/Images/AlicePatriot.jpeg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6b989c3060314bf4b486d37748751fc
+    m_importFrom: Assets/Models/Investigate/CandleStick.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8ae499e5fb67434facc8bdecaae9a9d
+    m_importFrom: Assets/Models/Investigate/CandleStick.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f444121f9d1844f54bdb15e811dc37a4
+    m_importFrom: Assets/Models/Investigate/CandleStick.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c34523310dda645d6ab1bbe0cbfa2ec3
+    m_importFrom: Assets/Scripts/UI/Menu/UIInvestigateScenePanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf748f2c900604800b8a11a5e7827f14
+    m_importFrom: Assets/Prefabs/UI/Panel/UIInvestigateScenePanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d3d9347d85db4302991d39b37e38027
+    m_importFrom: Assets/Prefabs/UI/Panel/UINoteBookPanel.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c01787221e35c4d8385bf2689c652497
+    m_importFrom: Assets/Scripts/UI/Menu/UINoteBookPanel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 937417a790eda5b4e8c159c66edecd5d
+    m_importFrom: Assets/Skyunion/UIManager/UIManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 14d39f77add5c4c6fa819340d3ef5986
+    m_importFrom: Assets/Scripts/Component/PropertyComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 63a6c89ddfcc14e64a3755ca5c4d91d3
+    m_importFrom: Assets/Models/Investigate/Desk.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 06a1f0f8165f54c8896ed89919d51f1b
+    m_importFrom: Assets/Models/Investigate/Desk.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f04ef1a6f74cb4695af43216ba4a6e71
+    m_importFrom: Assets/Models/Investigate/Desk.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b100ded74c0c54b2bb91a692c1f648f7
+    m_importFrom: Assets/Models/Investigate/Residence.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5cf64411d7a484acaad2ce7ea064dc8f
+    m_importFrom: Assets/Models/Investigate/Residence.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 987faf05e37c44edaa7dda01095454ae
+    m_importFrom: Assets/Models/Investigate/Residence.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 34c945912446549909295891d3bcb72a
+    m_importFrom: Assets/Images/InvestigableMark.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2148c3d90eb09429a824eb26ece95939
+    m_importFrom: Assets/Prefabs/UI/Mark
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71eba9648da17475e98fd9f9872595a4
+    m_importFrom: Assets/Prefabs/UI/Mark/InvestigableMark.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: df1f0be3f39dd4b59a61f03d03339585
+    m_importFrom: Assets/Scripts/Scene/Scene.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe9c3f9ca47d74d6d963738001a8bcff
+    m_importFrom: Assets/Scripts/UI/UIFollow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1eb21d2bda87945ab8d161e8a9425ac5
+    m_importFrom: Assets/Models/Investigate/PhotoFrame.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b1df19f1435a482a8ff04f624bb5780
+    m_importFrom: Assets/Models/Investigate/PhotoFrame.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c998ec9f70f9b4f61aa764ff11cfda5b
+    m_importFrom: Assets/Models/Investigate/PhotoFrame.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f81b8056c900648df838e07bdf1b2000
+    m_importFrom: Assets/Models/Investigate/NoteBook.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 45d699e8a0f374048964d8e6888d3ca1
+    m_importFrom: Assets/Models/Investigate/NoteBook.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 798a184eac1b84605b05229f72425337
+    m_importFrom: Assets/Models/Investigate/NoteBook.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d961a950655c49ecbf420487fa8eb4b
+    m_importFrom: Assets/Models/Investigate/LcokedDoor.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f40d517a4429a45b5995a6c85c2d35b8
+    m_importFrom: Assets/Models/Investigate/LcokedDoor.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8137c3fb8a71e44b8a61d446f240ca60
+    m_importFrom: Assets/Models/Investigate/LcokedDoor.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8124a65252c404bffb892d1b16aba2fc
+    m_importFrom: Assets/Models/Investigate/Diary.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e753edb6078c4d2b898ff398a9e44af
+    m_importFrom: Assets/Models/Investigate/Diary.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48455dfb32e7c43358cc85f2049eb8e6
+    m_importFrom: Assets/Models/Investigate/Diary.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb9eef05b032b46a78f22dcf561baa20
+    m_importFrom: Assets/Models/Investigate/Portraiture.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 77e1c945b04a743dc895d0395b1895ca
+    m_importFrom: Assets/Models/Investigate/Portraiture.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f9bb76aca36347698a0c768dac2e9d4
+    m_importFrom: Assets/Models/Investigate/Portraiture.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8d889c2b61ad345ca870151da4223c1e
+    m_importFrom: Assets/Models/Investigate/AcientBook.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 677a3c7ce03a84facba0b6ffb36851a5
+    m_importFrom: Assets/Models/Investigate/AcientBook.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30ececac1a68f4ae7a00b0fe5ea3aa93
+    m_importFrom: Assets/Models/Investigate/AcientBook.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: db7667203062c644ea1877077e30ebd6
+    m_importFrom: Assets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4539eb30e895bbb41b5eae6df2dde978
+    m_importFrom: Assets/Standard Assets/Utility
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f588d850485d0ae479d73cf3bd0b7b00
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonAcceleratorUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e9714160ce34f2b4ab63ff8c27bd68e1
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Footstep04.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d3fb8e05edcf4b41aef584ca1b0d06f
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b5b7be0f2332c24f89a2af018daa62d
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Textures/EthanNormals.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c5335f0882fe4d478883cc8c58ce906
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 05ec5cf00ca181d45a42ba1870e148c3
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a0245c71eb710114392b7dcfe5484e1b
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Textures
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c0578910bbe00d43919a92c7b9893fe
+    m_importFrom: Assets/Standard Assets/Utility/EventSystemChecker.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bc72db1e9dcb9647818df5a07871127
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0f57aeb1b8dce3342bea5c28ac17db24
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/VirtualInput.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aef224e1951a8274684081643c7fa672
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Models
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b43a4ef15621158419a2b639f7a98245
+    m_importFrom: Assets/Standard Assets/Utility/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1062212255550964e974f3ffb3cbaae3
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidRunTurn.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c2d84226fbbaf94e9c1451f1c39b06a
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: daa7e0829bc72c94babd728cc0466196
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Scripts/BallUserControl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c6271a290ef75b4c97d58746c86c5b8
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonTimescaleFullUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f62b52b2d4b721742a0bc5c6b4db468d
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Materials/EthanWhite.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 314f49b24dc9d5d40956a7b28c67b237
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52baaeb214519f347a35cf0edfd262ff
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/Rubber.physicmaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d9d26e2162aa4d11ab075b34c029673
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidIdleJumpUp.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a7cedf246fca744f90cbdc9dbe41166
+    m_importFrom: Assets/Standard Assets/Utility/TimedObjectActivator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d8675433a508ec47b8f895201eacf20
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonSpacebarSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1835e4537efbdd94b93c2dd136860f1d
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c52c953c83c2254a9fa72d50250f028
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidWalkTurn.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9529ecc3d479da5499993355e6c2cb4f
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs/MobileSingleStickControl.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c5cb22d331ef7d64796f917c6a455a32
+    m_importFrom: Assets/Standard Assets/Utility/WaypointProgressTracker.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fd099d339b4ae34692c8258e4f87531
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Materials/RollerBallGrey.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e4f1fee3de32377429fd1348fae62b10
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/TouchpadSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b5dce0492bdfb648a389fe390071625
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Materials/RollerBallWhite.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0626b924325d1c34cafa6b22297f4e4f
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/SliderHandleSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 54eb5844754051b40a918a84c33b7c1a
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Prefabs/AIThirdPersonController.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba92fb44336020f40bdf294bb66bc9da
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/Ice.physicmaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d89ea37480b6d75458aa38843e9688dc
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidCrouch.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5eebb5849c50a2c4ea24ded96e6f3aac
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7076a2a45ec52cc469dff98247300c0f
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Models
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 29014cd42b6d273408e0ceefd336c0b3
+    m_importFrom: Assets/Standard Assets/Utility/ParticleSystemDestroyer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 827c9cd4a3943534f909ac6473e17288
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonBrakeUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cadd54e4832aeef4b9359f44cbe335cd
+    m_importFrom: Assets/Standard Assets/Utility/SimpleMouseRotator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 492f54f4accf00440828ffcb9e4fcc19
+    m_importFrom: Assets/Standard Assets/Utility/CurveControlledBob.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58650e15a2607e44daa0f150e0061d89
+    m_importFrom: Assets/Standard Assets/Utility/DragRigidbody.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00c3c865782347f41b6358d9fba14b48
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c32f58513a41ef4dab9cb7704c5fb92
+    m_importFrom: Assets/Standard Assets/Characters
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1e2e7a54dcc8694ab1eca46d072f264
+    m_importFrom: Assets/Standard Assets/Utility/CameraRefocus.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b27507c5d0efbbd47ac8c1de9a1a0a35
+    m_importFrom: Assets/Standard Assets/Utility/PlatformSpecificContent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce7a80d520cacc042b5fe14f373d8173
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5485e2f56028a3c4cb54f5caa167377e
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickOverSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c8634e062924929664361c08745211fb
+    m_importFrom: Assets/Standard Assets/Utility/ActivateTrigger.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9866a92691696b346901281f2b329034
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonThumbstickUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 438c5036def53d643a5c720213903c0f
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2dac79461900e0f4c93561031c2e6902
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7d3269566d48b8447bb48d2259e28f8b
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/InputAxisScrollbar.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9ab98b66288df7b4fa182075f2f12bd6
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/AxisTouchButton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 01571ba68fb2dad46aa03094ab219579
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/Metal.physicmaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 999388b68bb99b44099461bfbed94358
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs/MobileTiltControlRig.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8bc94ec6ed537e743b481638bdcd503d
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Footstep02.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49b611e658efbf443b686a4036f74fe3
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonArrowOverSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 85bf3be603548374ca46f521a3aa7fda
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/ButtonHandler.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 83c81407209f85e4c87c0cda8b32868e
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/HeadBob.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7a16a07ec80d4962999a2a01495bed6
+    m_importFrom: Assets/Standard Assets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 521b611700410be45810047f0a74e899
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonUserControl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a1347817507220a4384f3ff6f7c24546
+    m_importFrom: Assets/Standard Assets/Utility/AutoMoveAndRotate.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb5f6e2757c821940b69cf1456f7865a
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonAcceleratorOverSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b886447cba80f74e820adb3c9e70c76
+    m_importFrom: Assets/Standard Assets/Utility/ForcedReset.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f76806479d916a64aa03f8e3eba7912f
+    m_importFrom: Assets/Standard Assets/Utility/SmoothFollow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81154777d5417884981849c5243f6c01
+    m_importFrom: Assets/Standard Assets/Utility/Prefabs/FramerateCounter.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 37e60a97f2c87ae41b6cdc1055d78cb9
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f03e10c73f30b4ab4aa8ea8f1cc16d36
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidMidAir.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71398ce7fbc3a5b4fa50b50bd54317a7
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/MobileControlRig.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 42e65e088b3f4374e851b8dbd38f3df9
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Footstep01.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 643c971818f68d3439e84b5d8bdafe07
+    m_importFrom: Assets/Standard Assets/Utility/ObjectResetter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f93df448921b46c45999c77f43856ba2
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Materials
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d7c6e4896067aa4fa512a00f692ac1c
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonTimescaleSlowUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d2f1a0944eff024ab396500807b91cd
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4db017495c69e8140a56a0e2b669e3f8
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonArrowUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a3b997593a4f12c4c991490593f3b513
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/CrossPlatformInputGuidelines.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a3983c59ebf804b4abba687bd7c9e92f
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonCameraCycleUpSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bfb2599080d5d24e84362b4ae314ae7
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 70852dc981465ea48bb527b9e33a87fd
+    m_importFrom: Assets/Standard Assets/Utility/WaypointCircuit.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb141fc9a700c9c4ca7e6dadb8acf24b
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidWalkTurnSharp.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4e2f32e9a1fefc24092337ae061f3dbc
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Textures/EthanOcclusion.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e09f07f9be24b2d4180a74a671348b5b
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Prefabs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7700d93a317c89246a647c7a6c3e7399
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Textures/RollerBallSpecularGloss.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1a5e04ae51004842aba06704a6c2903
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidWalk.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81c9795a96c094f4cbde4d65546aa9b2
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6ac1ce5a5adfd9f46adbf5b6f752a47c
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/CrossPlatformInputManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c2815a7ab32e42c4bb42f59caacb8ec1
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/ZeroFriction.physicMaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 971f44ba24a74294294daed00507d80e
+    m_importFrom: Assets/Standard Assets/Utility/AlphaButtonClickMask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 41b808ba7c2f15e47bef4912db87d7c5
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Scripts
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f66eeca8ac36914e9ec9a716a9d9f73
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b1a64ea234fb2343b8d0686c51280de
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonBrakeOverSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0de3730b71e479c47995d4a98395073e
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Textures
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3369231b1ed7ad34e84d9240a571db81
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs/MobileAircraftControls.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8566902b50d5bfb4fb7f8b89f9cdbe8b
+    m_importFrom: Assets/Standard Assets/Utility/DynamicShadowSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69b69a5b0e0a85b4aa97a7edc40c37d1
+    m_importFrom: Assets/Standard Assets/Utility/SimpleActivatorMenu.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 696c0e7b8c74e1442acbf15c2df9e72d
+    m_importFrom: Assets/Standard Assets/Editor/CrossPlatformInput
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b235179bd2a63d1468dd430670338c55
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Models/Ethan.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c1bbfafbde15c854681023b9e01e12dd
+    m_importFrom: Assets/Standard Assets/Utility/LerpControlledBob.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5e9e851c0e142814dac026a256ba2ac0
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs/FPSController.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cb8ed3cbba15f0479fbae54e0a963df
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidRun.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 51dd2e4c869794f75a0df7d54b210214
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidJumpAndFall.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d05d496cb4f43c14e80630addd23652e
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Models/RollerBall.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7737647c22c1fc64a88d5cd030c352ce
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Prefabs/ThirdPersonController.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 246cc59c7a84ea44f87f6b70acfe30c5
+    m_importFrom: Assets/Standard Assets/Utility/FollowTarget.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 29486a9cd1773f44f80570b5bd896a1d
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animator
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 753ea9ccf9eee6c42a0954ec8663b992
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Prefabs/RollerBall.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: af82a5dcdad0f544c99fd1a84212021d
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/ThirdPersonCharacterGuidelines.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2bed5dc5afacff44a00de8daae9703b
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidRunTurnSharp.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4884ccdc4224c44e8906a17d938fd2bc
+    m_importFrom: Assets/Standard Assets/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1caf40fc8bebb6b43b2550c05ca791d6
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/TouchPad.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e004fefca5c7ba44d9c5ffd46fdee2ed
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Scripts/Ball.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 621e901dcf5ebaf46bce29d18f67194c
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Materials/EthanGrey.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 37fac21d1f093d344816942d1abce94e
+    m_importFrom: Assets/Standard Assets/Utility/TimedObjectDestructor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fb3851da6a6f5948ab6892bee8ba920
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidStandTurn.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb0e763ded53048dd80e7b78c35ded56
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f93f63d068b08c459038c40fce897d8
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/Bouncy.physicmaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3aeb7dadc0c69d54d9e5777e9d5631f1
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/Wood.physicmaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a9383dda6cabc047b7a297602e93eb4
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Footstep03.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5897aeed9b676024fbb8c694b421a861
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Jump.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bc9b000e9b8028247bd816e159382646
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/FirstPersonCharacterGuidelines.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8912f13e18e67bc478684ec30d73bc64
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9703d53e47195aa4190acd11369ccd1b
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/MobileInput.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 943e057eaae705e43b9e9b2e53d6adb0
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 22bbf57ec543cee42a5aa0ec2dd9e457
+    m_importFrom: Assets/Standard Assets/Utility/FPSCounter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a94c9a7eb94ceec4a8d67a1890e22e51
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/ButtonResetSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cdb788e79be7594e8cc8e1f742d23b7
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/RollerBallGuidelines.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c6453f8e1f814744d8b94e5a6d1f9942
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Prefabs/RigidBodyFPSController.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 174090ae7f9eff84abe76f0ff062efac
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs/CarTiltControls.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b42c70f54fe4f24d84cdc651f46c005
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Textures/RollerBallAlbedo.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2169821f0567671499a5c10104c69c24
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Prefabs/DualTouchControls.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9961032f4f02c4f41997c3ea399d2f22
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3ee9c33ffee000840b0fed14ec400bc9
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 710bc43f80d178548bd226c252c8e65b
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6045a93fb05b9c74884821030da2c46c
+    m_importFrom: Assets/Standard Assets/Utility/FOVKick.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e52fb17f9b1e7fd48b8955f1391d3688
+    m_importFrom: Assets/Standard Assets/PhysicsMaterials/MaxFriction.physicMaterial
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b09d59f4499d45428baa7a21e954296
+    m_importFrom: Assets/Standard Assets/Characters/FirstPersonCharacter/Audio/Land.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 41db8cbfecdbdb54ab2bac971c05547a
+    m_importFrom: Assets/Standard Assets/Characters/RollerBall/Materials
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dffa50cfe77e0434bbfa71245b3dd529
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/HumanoidIdle.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea5873cfd9158664f89459f0c9e1d853
+    m_importFrom: Assets/Standard Assets/CrossPlatformInput/Sprites/SliderBackgroundSprite.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e2cf68ff4b1ffda45a77f7307dd789b9
+    m_importFrom: Assets/Standard Assets/Characters/ThirdPersonCharacter/Animator/ThirdPersonAnimatorController.controller
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c4978ff6447f9040b84acc89b0bbdc8
+    m_importFrom: Assets/Standard Assets/Utility/AutoMobileShaderSwitch.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b96fba204016f4d64a7279c1ca8f5dab
+    m_importFrom: Assets/Models/Investigate/Roof.obj
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bdb704aa0f7df4fb9849e8eada34089c
+    m_importFrom: Assets/Models/Investigate/Roof.mtl
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f299af7f835b94d13b7f7f685fd1838c
+    m_importFrom: Assets/Models/Investigate/Roof.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c3a3e4fea25d41a586745cff014b4af
+    m_importFrom: Assets/Models/Investigate/Roof.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 42f51512400474d95bfe9140cee82113
+    m_importFrom: Assets/Scripts/System/CheerUpSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f1cf1f34eba37468b8d9a59833f883b8
+    m_importFrom: Assets/Scripts/AIDecisions/EscapeDecision.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8842096456bca0f4fb63f98f714fbb9c
+    m_importFrom: Assets/Scripts/System/InputSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bce2bab6ade07ca4ab6ce64bfeede3fe
+    m_importFrom: Assets/Scripts/System/ItemSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6501a6ea53dfa5e428cdc2c21ae35537
+    m_importFrom: Assets/Scripts/System/MoveSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f908fdd6436641d2a17d2ab41b025cb
+    m_importFrom: Assets/Scripts/Component/StateComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9785c62eed9b84ad993a0df91b804754
+    m_importFrom: Assets/Scripts/System/AttackSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 892fe59f9c5a53449bf6084d1c9061d0
+    m_importFrom: Assets/Scripts/System/KnockSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cf3624b71d70417dbca9d85015151c6
+    m_importFrom: Assets/Scripts/System/AISystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 172961fa84c90294ea9e932771e5fdba
+    m_importFrom: Assets/Scripts/System/MonitorSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52a206b72a8f4f749c28d8b18b42dd19
+    m_importFrom: D:/Program Files/Unity/Editor/Data/PlaybackEngines/MetroSupport/Managed/UAP/UnityEngine.Networking.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 59408d08ac1a54f1e9c4e3ae5b8a5e52
+    m_importFrom: Assets/Scripts/Component/AIComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b98900113a1049d6a1001517c6e11c8
+    m_importFrom: Assets/Scripts/VoxelEditor/VoxelBlocks.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c2150104c9675664ea55497b254b69bf
+    m_importFrom: Assets/Scripts/Utility/FindPath.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c5339b8d97a64b2ca90eadfc1f3fb2e
+    m_importFrom: Assets/Scripts/Entity/BasicEntity.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: db6ff8e6998f5534ab152b65ced8f44d
+    m_importFrom: Assets/Scripts/CardSystem
+    m_exportTo: 
+    m_variantName: 
+  m_version: 2

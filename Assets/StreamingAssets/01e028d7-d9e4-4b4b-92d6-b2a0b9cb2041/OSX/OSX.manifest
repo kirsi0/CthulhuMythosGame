@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3876904680
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: parkbattlescene
+      Dependencies: {}
+    Info_1:
+      Name: uidialogpanel
+      Dependencies: {}
+    Info_2:
+      Name: uigamecompletepanel
+      Dependencies: {}
+    Info_3:
+      Name: uigamefailpanel
+      Dependencies: {}
+    Info_4:
+      Name: uimainmenupanel
+      Dependencies: {}
+    Info_5:
+      Name: uilogo
+      Dependencies: {}
