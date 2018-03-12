@@ -5,49 +5,7 @@ using Skyunion;
 
 static public class DialogPlayer
 {
-<<<<<<< HEAD
-	//文件保存
-	static List<Sprite> m_background = new List<Sprite> ();
-	static List<Sprite> m_tachie = new List<Sprite> ();
 
-	static List<TalkContent> m_content = new List<TalkContent> ();
-	static int currentContent;
-
-	static List<TalkNode> m_node = new List<TalkNode> ();
-	static int currentNode;
-	//装入事件
-	static public void LoadDialogEvent (DialogEvent e)
-	{
-
-		for (int i = 0; i < e.m_nodeList.Count; i++) {
-
-			switch (e.m_nodeList [i].m_dialogType) {
-			case DialogNode.NodeType.Talk:
-
-				TalkNode node = (TalkNode)e.m_nodeList [i];
-				m_node.Add (node);
-
-
-				break;
-			}
-		}
-		currentNode = 0;
-		currentContent = -1;
-
-		m_content = m_node [currentNode].m_talkContents;
-		GetSpriteAsset (m_node [currentNode].m_background, m_background);
-		GetSpriteAsset (m_node [currentNode].m_tachie, m_tachie);
-
-		UIManager.Instance ().ShowPanel<UIDialog> ();
-
-	}
-
-
-
-	static public string LoadContent ()
-	{
-		string content = m_content [currentContent].m_content;
-=======
 	static DialogWriter dialogWriter;
 	//临时保存
 	static DialogEvent m_dialogEvent;
@@ -183,64 +141,43 @@ static public class DialogPlayer
 	static public string LoadContent ()
 	{
 		string content = m_content [m_currentContent].m_content;
->>>>>>> temp
+
 		return content;
 	}
 
 	static public Sprite LoadTachie ()
 	{
-<<<<<<< HEAD
-		if (m_content [currentContent].m_tachie == 0) {
-			return null;
-		}
-		Sprite sprite = m_tachie [m_content [currentContent].m_tachie];
-=======
+
 		//if (m_content [currentContent].m_tachie == 0) {
 		//	return null;
 		//}
 		Sprite sprite = m_tachie [m_content [m_currentContent].m_tachie];
->>>>>>> temp
+
 		return sprite;
 	}
 
 	static public Sprite LoadBackground ()
 	{
-<<<<<<< HEAD
-		if (m_content [currentContent].m_backGround == 0) {
-			return null;
-		}
-		Sprite background = m_background [m_content [currentContent].m_backGround];
-=======
+
 		//if (m_content [currentContent].m_backGround == 0) {
 		//	return null;
 		//}
 		Sprite background = m_background [m_content [m_currentContent].m_backGround];
->>>>>>> temp
+
 		return background;
 	}
 
 	static public string LoadName ()
 	{
-<<<<<<< HEAD
-		string name = m_content [currentContent].m_name;
-=======
+
 		string name = m_content [m_currentContent].m_name;
->>>>>>> temp
+
 		return name;
 	}
 
 	static public bool IsReading ()
 	{
-<<<<<<< HEAD
-		if (currentContent == m_content.Count - 1) {
 
-			return false;
-		} else {
-			currentContent++;
-			return true;
-		}
-	}
-=======
 		Debug.Log ("m_currentContent : " + m_currentContent);
 		Debug.Log ("m_currentNode " + m_currentNode);
 		Debug.Log (" m_content.Count" + m_content.Count);
@@ -271,7 +208,7 @@ static public class DialogPlayer
 		}
 
 	}
->>>>>>> temp
+
 	////目前运行的事件是否结束
 	//bool IsReadable ()
 	//{
@@ -290,25 +227,19 @@ static public class DialogPlayer
 	static void GetSpriteAsset (List<string> name, List<Sprite> asset)
 	{
 		foreach (string str in name) {
-<<<<<<< HEAD
-			asset.Add (Resources.Load (str) as Sprite);
-=======
+
 			//Debug.Log (str);
 			//Sprite s = (Sprite)Resources.Load ("UI/" + str, typeof (Sprite));
 			//Debug.Log (s);
 			asset.Add (Resources.Load ("UI/" + str, typeof (Sprite)) as Sprite);
->>>>>>> temp
+
 		}
 	}
 
 	static void Clear ()
 	{
 		m_tachie.Clear ();
-<<<<<<< HEAD
-		m_content.Clear ();
-=======
 
->>>>>>> temp
 		m_background.Clear ();
 
 	}
@@ -364,10 +295,7 @@ public class TalkContent
 	public string m_name;
 	public string m_content;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> temp
 }
 
 public class MonoTalkContent : MonoBehaviour
@@ -466,11 +394,9 @@ public class MonoTalkNode : MonoBehaviour
 
 public class SelectionNode : DialogNode
 {
-<<<<<<< HEAD
-	Dictionary<string, List<TalkContent>> m_selection = new Dictionary<string, List<TalkContent>> ();
-=======
+
 	public Dictionary<string, TalkNode> m_selection = new Dictionary<string, TalkNode> ();
->>>>>>> temp
+
 
 	public SelectionNode (string name) : base (name)
 	{

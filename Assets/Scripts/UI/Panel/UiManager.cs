@@ -11,20 +11,14 @@ public class UiManager : MonoBehaviour {
     GameObject propety;
     GameObject tips;
     GameObject turn;
-<<<<<<< HEAD
     private BasicEntity entity ;
-=======
 
->>>>>>> temp
     public static UiManager uiManager; 
 
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
         entity = null;
-=======
 
->>>>>>> temp
         skill = null;
         bag = null;
         UiManager.uiManager = this;
@@ -38,7 +32,6 @@ public class UiManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
         if (entity==StateStaticComponent.m_currentEntity)
         {
             if (entity.GetComponent<BlockInfoComponent>().m_blockType == BlockType.Player)
@@ -75,52 +68,6 @@ public class UiManager : MonoBehaviour {
             CloseBag();
         }
         
-=======
-        if (StateStaticComponent.m_currentEntity != null
-    && StateStaticComponent.m_currentEntity.GetComponent<BlockInfoComponent>().m_blockType == BlockType.Player &&
-    StateStaticComponent.m_currentEntity.GetComponent<InputComponent>() != null)
-        {
-            if(skill==null)
-                ShowSkill(StateStaticComponent.m_currentEntity);
-
-            if (Input.GetButtonDown("Bag"))
-            {
-                if (bag != null)
-                {
-                    CloseBag();
-                }
-                else
-                {
-                    ShowBag(StateStaticComponent.m_currentEntity);
-                }
-            }
-            //if (Input.GetButtonDown("Propety"))
-            //{
-            //    if (propety != null)
-            //    {
-            //        ;
-            //    }
-            //    else
-            //    {
-            //        ShowPropety(StateStaticComponent.m_currentEntity);
-            //    }
-            //}
-        }
-        else
-        {
-            CloseSkill();
-            CloseBag();
-        }
-        if (Input.GetButtonDown("ShowPropety"))
-        {
-            if (propety.activeSelf)
-                propety.SetActive(false);
-            else
-            {
-                propety.SetActive(true);
-            }
-        }
->>>>>>> temp
         if (Input.GetButtonDown("ShowTips"))
         {
             if (tips.activeSelf)

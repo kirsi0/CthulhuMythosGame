@@ -144,11 +144,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			}
 
 			if (m_IsGrounded) {
-<<<<<<< HEAD
-				m_RigidBody.drag = 5f;
-=======
+
 				m_RigidBody.drag = 10f;
->>>>>>> temp
+
 
 				if (m_Jump) {
 					m_RigidBody.drag = 0f;

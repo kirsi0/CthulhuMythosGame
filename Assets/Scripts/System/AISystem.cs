@@ -41,7 +41,7 @@ public class AISystem : BasicSystem
 
 	public override void Execute (List<BasicEntity> entities)
 	{
-<<<<<<< HEAD
+
         foreach (BasicEntity e in entities)
         {
             AIComponent aiInfo = e.GetComponent<AIComponent>();
@@ -94,18 +94,6 @@ public class AISystem : BasicSystem
             //    }
             //}
         }
-=======
-		if (turnNumber - StateStaticComponent.m_turneNumber != 0) {
-			foreach (BasicEntity e in entities) {
-				if (StateStaticComponent.m_currentEntity == e) {
-					AIComponent aiComponent = (AIComponent)e.GetSpecicalComponent (ComponentType.AI);
-					aiComponent.m_enemy.Execute ();
-				}
-			}
-			turnNumber++;
-		}
->>>>>>> temp
-
 
 	}
 }

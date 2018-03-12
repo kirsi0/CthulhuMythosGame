@@ -7,26 +7,21 @@ using Skyunion;
 
 public class UIInvestigateScenePanel : UIPanel
 {
-<<<<<<< HEAD
-=======
+
 	public Text m_noteContent;
 
 	private bool m_isOpen = false;
->>>>>>> temp
+
 
 	// Use this for initialization
 	void Start ()
 	{
-<<<<<<< HEAD
-		AddClickEvent ("InvestigatorBook", showBook);
 
-		UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
-=======
 
 		AddClickEvent ("InvestigatorBook", ShowBook);
 
 		//UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
->>>>>>> temp
+
 
 		//初始化Scene
 		GameObject.Find ("Scene").GetComponent<Scene> ().SceneInit ();
@@ -35,15 +30,7 @@ public class UIInvestigateScenePanel : UIPanel
 	// Update is called once per frame
 	void Update ()
 	{
-<<<<<<< HEAD
 
-	}
-
-	void showBook (BaseEventData eventDate)
-	{
-		UIManager.Instance ().ShowPanel<UINoteBookPanel> ();
-
-=======
 		if (Input.GetKeyDown (KeyCode.B)) {
 			SwitchBook ();
 		}
@@ -75,7 +62,7 @@ public class UIInvestigateScenePanel : UIPanel
 
 			UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
 		}
->>>>>>> temp
+
 	}
 }
 
@@ -100,11 +87,10 @@ public class Character
 	{
 		m_characterType = type;
 
-<<<<<<< HEAD
-=======
+
 		m_name = name;
 
->>>>>>> temp
+
 		m_str = str;
 		m_obs = obs;
 		m_agi = agi;

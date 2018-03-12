@@ -132,11 +132,7 @@ public class ItemSystem : BasicSystem
             //使用一次消耗一点行动点
             StateComponent state = entity.GetComponent<StateComponent>();
             state.m_actionPoint -= 1;
-<<<<<<< HEAD
             state.AnimationStart();
-=======
-            StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
->>>>>>> temp
             state.Invoke("AnimationEnd", 1);
         }
     }
@@ -148,10 +144,8 @@ public class ItemSystem : BasicSystem
         //移除瓶子
         itemComp.item.Remove(ItemType.HealthPotion);
         entity.GetComponent<ItemComponent>().current = ItemType.Null;
-<<<<<<< HEAD
         entity.GetComponent<StateComponent>().AnimationStart();
-=======
->>>>>>> temp
+
         StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
         entity.GetComponent<StateComponent>().Invoke("AnimationEnd", 1);
     }
@@ -205,11 +199,8 @@ public class ItemSystem : BasicSystem
             //使用一次消耗一点行动点
             StateComponent state = entity.GetComponent<StateComponent>();
             state.m_actionPoint -= 1;
-<<<<<<< HEAD
             state.AnimationStart();
-=======
-            StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
->>>>>>> temp
+
             state.Invoke("AnimationEnd", 1);
         }
     }

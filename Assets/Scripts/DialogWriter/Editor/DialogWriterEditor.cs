@@ -2,99 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-<<<<<<< HEAD
-using System.IO;
-using System.Xml;
 
-public static class XMLUtility
-{
-	public static List<DialogEvent> LoadXMLEvent ()
-	{
-		return new List<DialogEvent> ();
-	}
-
-	public static DialogWriter ProduceWriter ()
-	{
-		GameObject writerGo = GameObject.Find ("Dialog Writer");
-		DialogWriter writer = new DialogWriter ();
-		for (int i = 0; i < writerGo.transform.childCount; i++) {
-			Transform t1 = writerGo.transform.GetChild (i);
-			DialogEvent dialogevent = t1.gameObject.GetComponent<MonoDialogEvent> ().m_event;
-			DialogEvent newDialogEvent = new DialogEvent (dialogevent.m_name);
-			dialogevent.m_eventOrder = i;
-			writer.m_dialogEventList.Add (newDialogEvent);
-			for (int j = 0; j < t1.childCount; j++) {
-				Transform t2 = t1.GetChild (j);
-				TalkNode talkNode = t2.gameObject.GetComponent<MonoTalkNode> ().m_node;
-				TalkNode newTalkNode = new TalkNode (talkNode.m_name);
-				newTalkNode.m_background = talkNode.m_background;
-				newTalkNode.m_tachie = talkNode.m_tachie;
-				newTalkNode.m_name = talkNode.m_name;
-				newTalkNode.m_dialogType = DialogNode.NodeType.Talk;
-				newDialogEvent.m_nodeList.Add (newTalkNode);
-				for (int k = 0; k < t2.childCount; k++) {
-					Transform t3 = t2.GetChild (k);
-					TalkContent talkContent = t3.gameObject.GetComponent<MonoTalkContent> ().m_talkContent;
-					newTalkNode.m_talkContents.Add (talkContent);
-				}
-			}
-		}
-		return writer;
-	}
-
-	public static void SaveXMLEvent ()
-	{
-		DialogWriter dialogWriter = ProduceWriter ();
-
-		FileInfo fi = new FileInfo (Application.dataPath + "/OutputXml/" + dialogWriter.GetType () + ".xml");
-
-		if (fi.Exists) {
-			Debug.Log ("dsadasdsdasdadadasdasdasdwdw");
-			//fi.MoveTo ("./backup");
-			fi.Delete ();
-		}
-
-		List<DialogEvent> dialogEventLsit = dialogWriter.m_dialogEventList;
-
-		XmlDocument doc = new XmlDocument ();
-		for (int i = 0; i < dialogEventLsit.Count; i++) {
-			XmlElement eve = doc.CreateElement ("Event");
-			DialogEvent dialogEvent = dialogEventLsit [i];
-			eve.SetAttribute ("Name", dialogEvent.m_name);
-			eve.SetAttribute ("EvenOrder", dialogEvent.m_eventOrder.ToString ());
-			for (int j = 0; j < dialogEvent.m_nodeList.Count; j++) {
-				XmlElement node = doc.CreateElement ("TalkNode");
-				TalkNode talkNode = (TalkNode)dialogEvent.m_nodeList [j];
-				node.SetAttribute ("Name", talkNode.m_name);
-				node.SetAttribute ("NodeType", talkNode.m_dialogType.ToString ());
-				for (int k = 0; k < talkNode.m_background.Count; k++) {
-					node.SetAttribute ("Background", talkNode.m_background [k]);
-				}
-				for (int k = 0; k < talkNode.m_tachie.Count; k++) {
-					node.SetAttribute ("Tachie", talkNode.m_tachie [k]);
-				}
-				for (int k = 0; k < talkNode.m_talkContents.Count; k++) {
-					XmlElement content = doc.CreateElement ("TalkContent");
-					TalkContent talkContent = talkNode.m_talkContents [k];
-					content.SetAttribute ("Background", talkContent.m_backGround.ToString ());
-					content.SetAttribute ("Tachie", talkContent.m_tachie.ToString ());
-					content.SetAttribute ("Name", talkContent.m_name);
-					content.SetAttribute ("Content", talkContent.m_content);
-					node.AppendChild (content);
-				}
-				eve.AppendChild (node);
-			}
-			doc.AppendChild (eve);
-		}
-
-		doc.Save (Application.dataPath + "/OutputXml/" + dialogWriter.GetType () + ".xml");
-	}
-}
-
-=======
 
 //
->>>>>>> temp
+
 [CustomEditor (typeof (MonoDialogWriter))]
 public class DialogWriterEditor : Editor
 {
@@ -103,10 +14,9 @@ public class DialogWriterEditor : Editor
 	public DialogWriter m_dialogWriter;
 
 	string eventName = "";
-<<<<<<< HEAD
-=======
+
 	//
->>>>>>> temp
+
 	public override void OnInspectorGUI ()
 	{
 		base.OnInspectorGUI ();
@@ -115,25 +25,22 @@ public class DialogWriterEditor : Editor
 
 		EditorGUILayout.BeginHorizontal ();
 		if (GUILayout.Button ("LoadXmlDialog")) {
-<<<<<<< HEAD
 
-=======
 			DialogWriter dialogWriter = XMLUtility.LoadXMLEvent ();
 			m_monoDialogWriter.m_dialogWriter = XMLUtility.LoadXMLEvent ();
 			UpdateWriterTree (m_dialogWriter.m_dialogEventList);
->>>>>>> temp
+
 		}
 		if (GUILayout.Button ("SaveXmlDialog")) {
 			XMLUtility.SaveXMLEvent ();
 		}
-<<<<<<< HEAD
-=======
+
 
 		if (GUILayout.Button ("RefreshDialogTree")) {
 			//手动refresh
 			UpdateWriterTree (m_dialogWriter.m_dialogEventList);
 		}
->>>>>>> temp
+
 		EditorGUILayout.EndHorizontal ();
 
 		eventName = (string)EditorGUILayout.TextField ("New Event Name", eventName);
@@ -145,10 +52,7 @@ public class DialogWriterEditor : Editor
 				EditorUtility.DisplayDialog ("Add New Event Fail", "Event name is empty", "Redo");
 			}
 		}
-<<<<<<< HEAD
 
-		EditorGUILayout.TextField ("Event Number ", m_dialogWriter.m_dialogEventList.Count.ToString ());
-=======
 		EditorGUILayout.TextField ("Event Number ", m_dialogWriter.m_dialogEventList.Count.ToString ());
 		for (int i = 0; i < m_dialogWriter.m_dialogEventList.Count; i++) {
 			EditorGUILayout.BeginHorizontal ();
@@ -161,7 +65,7 @@ public class DialogWriterEditor : Editor
 			EditorGUILayout.EndHorizontal ();
 		}
 
->>>>>>> temp
+
 		EditorGUILayout.EndVertical ();
 	}
 
@@ -170,18 +74,13 @@ public class DialogWriterEditor : Editor
 		m_monoDialogWriter = target as MonoDialogWriter;
 
 		m_dialogWriter = m_monoDialogWriter.m_dialogWriter;
-<<<<<<< HEAD
 
-		UpdateWriterTree (m_dialogWriter.m_dialogEventList);
-	}
-
-=======
 		Debug.Log (m_dialogWriter.m_dialogEventList);
 		//UpdateWriterTree (m_dialogWriter.m_dialogEventList);
 	}
 
 	//显示所有的子节点
->>>>>>> temp
+
 	private void UpdateWriterTree (List<DialogEvent> eventList)
 	{
 		CleanAllEvent ();
@@ -190,13 +89,7 @@ public class DialogWriterEditor : Editor
 
 			MonoDialogEvent monoEvent = ShowEvent (e);
 			foreach (DialogNode n in monoEvent.m_event.m_nodeList) {
-<<<<<<< HEAD
 
-				MonoTalkNode monoTalkNode = ShowNode (n, monoEvent);
-				foreach (TalkContent content in monoTalkNode.m_node.m_talkContents) {
-
-					MonoTalkContent monoTalkContent = ShowContent (content, monoTalkNode);
-=======
 				if (n.m_dialogType == DialogNode.NodeType.Talk) {
 					MonoTalkNode monoTalkNode = ShowTalkNode (n, monoEvent);
 					foreach (TalkContent content in monoTalkNode.m_node.m_talkContents) {
@@ -213,7 +106,7 @@ public class DialogWriterEditor : Editor
 							MonoTalkContent monoTalkContent = ShowContent (content, monoTalkNode);
 						}
 					}
->>>>>>> temp
+
 				}
 			}
 		}
@@ -231,33 +124,16 @@ public class DialogWriterEditor : Editor
 	}
 
 
-<<<<<<< HEAD
-	private MonoTalkNode ShowNode (DialogNode node, MonoDialogEvent monoEvent)
-=======
+
 	private MonoTalkNode ShowTalkNode (DialogNode node, MonoDialogEvent monoEvent)
->>>>>>> temp
+
 	{
 
 		GameObject go = new GameObject (node.m_name + "-" + node.m_dialogType);
 		go.transform.SetParent (monoEvent.transform);
 		go.transform.position = Vector3.zero;
 
-<<<<<<< HEAD
-		switch (node.m_dialogType) {
-		case DialogNode.NodeType.Selection:
-			MonoSelectionNode selectionNode = go.AddComponent<MonoSelectionNode> ();
-			selectionNode.Init ((SelectionNode)node);
-			//todo
-			return null;
 
-
-		case DialogNode.NodeType.Talk:
-			MonoTalkNode talkNode = go.AddComponent<MonoTalkNode> ();
-			talkNode.Init ((TalkNode)node);
-			return talkNode;
-		}
-		return null;
-=======
 		MonoTalkNode talkNode = go.AddComponent<MonoTalkNode> ();
 		talkNode.Init ((TalkNode)node);
 		return talkNode;
@@ -287,7 +163,7 @@ public class DialogWriterEditor : Editor
 		talkNode.Init ((TalkNode)node);
 		return talkNode;
 
->>>>>>> temp
+
 	}
 
 	MonoTalkContent ShowContent (TalkContent talkNode, MonoTalkNode monoTalkNode)
@@ -312,10 +188,7 @@ public class DialogWriterEditor : Editor
 			i--;
 		}
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> temp
 }
 
 
@@ -360,9 +233,7 @@ public class DialogEventEditor : Editor
 		}
 		//添加选择节点
 		EditorGUILayout.TextField ("Node Number ", m_dialogEvent.m_nodeList.Count.ToString ());
-<<<<<<< HEAD
 
-=======
 		for (int i = 0; i < m_dialogEvent.m_nodeList.Count; i++) {
 			EditorGUILayout.BeginHorizontal ();
 
@@ -373,7 +244,7 @@ public class DialogEventEditor : Editor
 			}
 			EditorGUILayout.EndHorizontal ();
 		}
->>>>>>> temp
+
 		EditorGUILayout.EndVertical ();
 
 	}
@@ -428,8 +299,7 @@ public class DialogEventEditor : Editor
 		}
 	}
 }
-<<<<<<< HEAD
-=======
+
 [CustomEditor (typeof (MonoSelectionNode))]
 public class SelectionNodeEditor : Editor
 {
@@ -510,7 +380,7 @@ public class SelectionNodeEditor : Editor
 		}
 	}
 }
->>>>>>> temp
+
 
 [CustomEditor (typeof (MonoTalkNode))]
 public class TalkNodeEditor : Editor
@@ -542,11 +412,9 @@ public class TalkNodeEditor : Editor
 			m_talkNode.m_background.Add (m_background.name);
 		}
 		if (m_talkNode != null) {
-<<<<<<< HEAD
-			EditorGUILayout.TextField ("Content Number", m_talkNode.m_talkContents.Count.ToString ());
-=======
+
 			EditorGUILayout.TextField ("Asset Number", (m_talkNode.m_background.Count + m_talkNode.m_tachie.Count).ToString ());
->>>>>>> temp
+
 
 			for (int i = 0; i < m_talkNode.m_tachie.Count; i++) {
 				EditorGUILayout.BeginHorizontal ();
@@ -567,8 +435,7 @@ public class TalkNodeEditor : Editor
 
 			}
 		}
-<<<<<<< HEAD
-=======
+
 
 		//添加选择节点
 		EditorGUILayout.TextField ("Node Number ", m_talkNode.m_talkContents.Count.ToString ());
@@ -582,7 +449,7 @@ public class TalkNodeEditor : Editor
 			}
 			EditorGUILayout.EndHorizontal ();
 		}
->>>>>>> temp
+
 		EditorGUILayout.EndVertical ();
 	}
 
@@ -651,19 +518,15 @@ public class TalkContentEditor : Editor
 		m_monoTalkConten = target as MonoTalkContent;
 		m_talkContent = m_monoTalkConten.m_talkContent;
 
-<<<<<<< HEAD
-		ShowContent ();
-=======
+
 		//ShowContent ();
->>>>>>> temp
+
 	}
 
 	void ShowContent ()
 	{
-<<<<<<< HEAD
-		m_monoTalkConten.gameObject.name = m_talkContent.m_name + m_talkContent.GetType ();
-=======
+
 		m_monoTalkConten.gameObject.name = m_talkContent.m_name + "+" + m_talkContent.GetType ();
->>>>>>> temp
+
 	}
 }

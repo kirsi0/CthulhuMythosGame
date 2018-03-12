@@ -6,17 +6,7 @@ using System.Xml;
 
 public static class XMLUtility
 {
-<<<<<<< HEAD
-	public static string path = Application.dataPath + "/OutputXml/dialogWriter.xml";
-	public static DialogWriter LoadXMLEvent ()
-	{
-		XmlReader reader = new XmlTextReader (path);
 
-		DialogWriter newDialogWriter = null;
-		DialogEvent newDialogEvent = null;
-		TalkNode newTalkNode = null;
-		TalkContent newTalkContent = null;
-=======
 	//保存路径
 
 	public static string path = Application.dataPath + "/OutputXml/dialogWriter.xml";
@@ -51,7 +41,6 @@ public static class XMLUtility
 		SelectionNode newSelectionNode = null;
 		TalkContent newTalkContent = null;
 		string newSelect = "";
->>>>>>> temp
 
 		newDialogWriter = new DialogWriter ();
 		while (reader.Read ()) {
@@ -65,13 +54,8 @@ public static class XMLUtility
 
 
 				} else if (reader.LocalName == "Event") {
-<<<<<<< HEAD
-					if (newDialogEvent != null) {
-						newDialogWriter.m_dialogEventList.Add (newDialogEvent);
-					}
-=======
 
->>>>>>> temp
+
 					newDialogEvent = new DialogEvent ("");
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
@@ -81,14 +65,7 @@ public static class XMLUtility
 							newDialogEvent.m_eventOrder = int.Parse (reader.Value);
 						}
 					}
-<<<<<<< HEAD
-				} else if (reader.LocalName == "TalkNode") {
-					if (newTalkNode != null) {
-						newDialogEvent.m_nodeList.Add (newTalkNode);
 
-					}
-					newTalkNode = new TalkNode ("");
-=======
 					if (newDialogWriter != null) {
 						newDialogWriter.m_dialogEventList.Add (newDialogEvent);
 					}
@@ -96,7 +73,7 @@ public static class XMLUtility
 
 					newTalkNode = new TalkNode ("");
 
->>>>>>> temp
+
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
 						if (reader.Name == "Name") {
@@ -106,8 +83,7 @@ public static class XMLUtility
 							newTalkNode.m_dialogType = (DialogNode.NodeType)System.Enum.Parse (typeof (DialogNode.NodeType), reader.Value);
 						}
 					}
-<<<<<<< HEAD
-=======
+
 					//不是选择分支下的对话节点
 					if (m_isTalkNode) {
 						if (newDialogEvent != null) {
@@ -121,7 +97,7 @@ public static class XMLUtility
 						}
 					}
 
->>>>>>> temp
+
 				} else if (reader.LocalName == "Background") {
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
@@ -139,13 +115,7 @@ public static class XMLUtility
 						}
 					}
 				} else if (reader.LocalName == "TalkContent") {
-<<<<<<< HEAD
-					if (newTalkContent != null) {
-						newTalkNode.m_talkContents.Add (newTalkContent);
-					}
-=======
 
->>>>>>> temp
 					newTalkContent = new TalkContent ();
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
@@ -159,53 +129,6 @@ public static class XMLUtility
 							newTalkContent.m_content = reader.Value;
 						}
 					}
-<<<<<<< HEAD
-				}
-			}
-
-
-		}
-		if (newTalkContent != null && newTalkNode != null) {
-			newTalkNode.m_talkContents.Add (newTalkContent);
-
-		}
-
-		if (newDialogEvent != null && newTalkNode != null) {
-			newDialogEvent.m_nodeList.Add (newTalkNode);
-		}
-
-		if (newDialogWriter != null && newDialogEvent != null) {
-			newDialogWriter.m_dialogEventList.Add (newDialogEvent);
-		}
-
-		return newDialogWriter;
-	}
-
-	public static DialogWriter ProduceWriter ()
-	{
-		GameObject writerGo = GameObject.Find ("Dialog Writer");
-		DialogWriter writer = new DialogWriter ();
-		for (int i = 0; i < writerGo.transform.childCount; i++) {
-			Transform t1 = writerGo.transform.GetChild (i);
-			DialogEvent dialogevent = t1.gameObject.GetComponent<MonoDialogEvent> ().m_event;
-			DialogEvent newDialogEvent = new DialogEvent (dialogevent.m_name);
-			dialogevent.m_eventOrder = i;
-			writer.m_dialogEventList.Add (newDialogEvent);
-			for (int j = 0; j < t1.childCount; j++) {
-				Transform t2 = t1.GetChild (j);
-				TalkNode talkNode = t2.gameObject.GetComponent<MonoTalkNode> ().m_node;
-				TalkNode newTalkNode = new TalkNode (talkNode.m_name);
-				newTalkNode.m_background = talkNode.m_background;
-				newTalkNode.m_tachie = talkNode.m_tachie;
-				newTalkNode.m_name = talkNode.m_name;
-				newTalkNode.m_dialogType = DialogNode.NodeType.Talk;
-				newDialogEvent.m_nodeList.Add (newTalkNode);
-				for (int k = 0; k < t2.childCount; k++) {
-					Transform t3 = t2.GetChild (k);
-					TalkContent talkContent = t3.gameObject.GetComponent<MonoTalkContent> ().m_talkContent;
-					newTalkNode.m_talkContents.Add (talkContent);
-				}
-=======
 
 					if (newTalkNode != null) {
 						newTalkNode.m_talkContents.Add (newTalkContent);
@@ -279,17 +202,12 @@ public static class XMLUtility
 					}
 				}
 
->>>>>>> temp
 			}
 		}
 		return writer;
 	}
 
-<<<<<<< HEAD
-	public static void SaveXMLEvent ()
-	{
-		DialogWriter dialogWriter = ProduceWriter ();
-=======
+
 	//从mono中提取对象并保存到临时对象中，并加入上一级的临时对象的子对象中
 	static void WriteDialogEvent (Transform monoDialogEvent, int eventOrder)
 	{
@@ -341,16 +259,12 @@ public static class XMLUtility
 	{
 		DialogWriter dialogWriter = ProduceWriter ();
 		//保存路径
->>>>>>> temp
+
 		path = Application.dataPath + "/OutputXml/" + dialogWriter.GetType () + ".xml";
 		FileInfo fi = new FileInfo (path);
 
 		if (fi.Exists) {
-<<<<<<< HEAD
-			Debug.Log ("dsadasdsdasdadadasdasdasdwdw");
-=======
-			//Debug.Log ("dsadasdsdasdadadasdasdasdwdw");
->>>>>>> temp
+
 			//fi.MoveTo ("./backup");
 			fi.Delete ();
 		}
@@ -365,34 +279,7 @@ public static class XMLUtility
 			eve.SetAttribute ("Name", dialogEvent.m_name);
 			eve.SetAttribute ("EvenOrder", dialogEvent.m_eventOrder.ToString ());
 			for (int j = 0; j < dialogEvent.m_nodeList.Count; j++) {
-<<<<<<< HEAD
-				XmlElement node = doc.CreateElement ("TalkNode");
-				TalkNode talkNode = (TalkNode)dialogEvent.m_nodeList [j];
-				node.SetAttribute ("Name", talkNode.m_name);
-				node.SetAttribute ("NodeType", talkNode.m_dialogType.ToString ());
-				for (int k = 0; k < talkNode.m_background.Count; k++) {
-					//node.SetAttribute ("Background"+k, );
-					XmlElement background = doc.CreateElement ("Background");
-					background.SetAttribute ("Name", talkNode.m_background [k]);
-					node.AppendChild (background);
-				}
-				for (int k = 0; k < talkNode.m_tachie.Count; k++) {
-					XmlElement tachie = doc.CreateElement ("Tachie");
-					tachie.SetAttribute ("Name", talkNode.m_tachie [k]);
-					node.AppendChild (tachie);
-					//node.SetAttribute ("Tachie"+k, talkNode.m_tachie [k]);
-				}
-				for (int k = 0; k < talkNode.m_talkContents.Count; k++) {
-					XmlElement content = doc.CreateElement ("TalkContent");
-					TalkContent talkContent = talkNode.m_talkContents [k];
-					content.SetAttribute ("Background", talkContent.m_backGround.ToString ());
-					content.SetAttribute ("Tachie", talkContent.m_tachie.ToString ());
-					content.SetAttribute ("Name", talkContent.m_name);
-					content.SetAttribute ("Content", talkContent.m_content);
-					node.AppendChild (content);
-				}
-				eve.AppendChild (node);
-=======
+
 
 				//判断是否为talk节点
 				if (dialogEvent.m_nodeList [j].m_dialogType == DialogNode.NodeType.Talk) {
@@ -467,7 +354,6 @@ public static class XMLUtility
 					eve.AppendChild (node);
 				}
 
->>>>>>> temp
 			}
 			dialogWriterElem.AppendChild (eve);
 		}
@@ -475,9 +361,7 @@ public static class XMLUtility
 
 		doc.Save (path);
 	}
-<<<<<<< HEAD
-}
-=======
+
 }
 
->>>>>>> temp
+

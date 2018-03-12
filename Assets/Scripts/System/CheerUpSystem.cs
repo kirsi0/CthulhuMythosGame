@@ -28,11 +28,8 @@ public class CheerUpSystem : BasicSystem
             int i = AiToInput.GetAbilityCount(entity, M_LinkedType);
             if (i >= ab.m_temporaryAbility.Count || i != input.currentKey)
                 continue;
-<<<<<<< HEAD
             ap.AnimationStart();
-=======
-            StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
->>>>>>> temp
+
             ap.m_actionPoint += cu.m_addAp ;
             if(!ab.m_coldDown.ContainsKey(M_LinkedType))
                 ab.m_coldDown.Add(M_LinkedType, cu.m_coldDown);
