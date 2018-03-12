@@ -5,6 +5,7 @@ using Skyunion;
 
 static public class DialogPlayer
 {
+<<<<<<< HEAD
 	//文件保存
 	static List<Sprite> m_background = new List<Sprite> ();
 	static List<Sprite> m_tachie = new List<Sprite> ();
@@ -46,35 +47,191 @@ static public class DialogPlayer
 	static public string LoadContent ()
 	{
 		string content = m_content [currentContent].m_content;
+=======
+	static DialogWriter dialogWriter;
+	//临时保存
+	static DialogEvent m_dialogEvent;
+	//现在选择的node
+	static int m_currentNode;
+
+
+	//保存背景和立绘的文件保存
+	static List<Sprite> m_background = new List<Sprite> ();
+	static List<Sprite> m_tachie = new List<Sprite> ();
+	static List<TalkContent> m_content = new List<TalkContent> ();
+	//保存选择节点的多个选项
+	static List<string> m_select = new List<string> ();
+	//当前显示内容的序号
+	static int m_currentContent;
+
+	//保存所选的选项内容，作为暂时的保存处
+	public static string m_selected;
+
+	//初始化
+	static void Init ()
+	{
+		dialogWriter = new DialogWriter ();
+		dialogWriter = XMLUtility.LoadXMLEvent ();
+	}
+
+
+	//装入事件
+	static public void Load (string name)
+	{
+		//第一次执行时
+		if (dialogWriter == null) {
+			Init ();
+		}
+		m_dialogEvent = null;
+
+		for (int i = 0; i < dialogWriter.m_dialogEventList.Count; i++) {
+			Console.Log (dialogWriter.m_dialogEventList [i].m_name);
+		}
+		for (int i = 0; i < dialogWriter.m_dialogEventList.Count; i++) {
+			if (dialogWriter.m_dialogEventList [i].m_name == name) {
+
+				Camera.main.GetComponent<RayCastDetection> ().CloseDetection ();
+				GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (false);
+
+				m_dialogEvent = dialogWriter.m_dialogEventList [i];
+
+				m_currentNode = 0;
+
+			}
+		}
+
+		if (m_dialogEvent == null) {
+			Console.Log ("Cant find Story!");
+
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (true);
+			Camera.main.GetComponent<RayCastDetection> ().OpenDetection ();
+			return;
+		} else {
+			Console.Log ("yes, data is exist!");
+			Play ();
+		}
+
+	}
+	static int i = 0;
+	static void Play ()
+	{
+
+
+		if (m_dialogEvent.m_nodeList [m_currentNode].m_dialogType == DialogNode.NodeType.Talk) {
+
+			LoadTalk ();
+			UIManager.Instance ().ShowPanel<UIDialogPanel> ();
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (false);
+
+			if (i != 0) {
+				GameObject.Find ("UIDialogPanel").GetComponent<UIDialogPanel> ().InitDialog ();
+			}
+			i++;
+
+		} else {
+			LoadSelection ();
+			UIManager.Instance ().ShowPanel<UISelectPanel> ();
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (false);
+
+
+			GameObject.Find ("UISelectPanel").GetComponent<UISelectPanel> ().InitSelect (m_select);
+		}
+	}
+	static public void PlaySelection ()
+	{
+
+
+		UIManager.Instance ().ClosePanel<UISelectPanel> ();
+
+
+		Clear ();
+		//检查的时候会自增，因此一开始先减去自增的数值
+		m_currentContent = -1;
+
+		SelectionNode m_selectNode = (SelectionNode)m_dialogEvent.m_nodeList [m_currentNode];
+		Debug.Log ("SelectedOption : " + m_selected);
+		TalkNode m_node = m_selectNode.m_selection [m_selected];
+		m_content = m_node.m_talkContents;
+		GetSpriteAsset (m_node.m_background, m_background);
+		GetSpriteAsset (m_node.m_tachie, m_tachie);
+
+		GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (false);
+
+		UIManager.Instance ().ShowPanel<UIDialogPanel> ();
+		GameObject.Find ("UIDialogPanel").GetComponent<UIDialogPanel> ().InitDialog ();
+
+	}
+	static void LoadTalk ()
+	{
+		Clear ();
+		//检查的时候会自增，因此一开始先减去自增的数值
+		m_currentContent = -1;
+
+		TalkNode m_node = (TalkNode)m_dialogEvent.m_nodeList [m_currentNode];
+		m_content = m_node.m_talkContents;
+		GetSpriteAsset (m_node.m_background, m_background);
+		GetSpriteAsset (m_node.m_tachie, m_tachie);
+	}
+	static void LoadSelection ()
+	{
+		SelectionNode m_node = (SelectionNode)m_dialogEvent.m_nodeList [m_currentNode];
+		foreach (string s in m_node.m_selection.Keys) {
+			m_select.Add (s);
+		}
+	}
+
+	static public string LoadContent ()
+	{
+		string content = m_content [m_currentContent].m_content;
+>>>>>>> temp
 		return content;
 	}
 
 	static public Sprite LoadTachie ()
 	{
+<<<<<<< HEAD
 		if (m_content [currentContent].m_tachie == 0) {
 			return null;
 		}
 		Sprite sprite = m_tachie [m_content [currentContent].m_tachie];
+=======
+		//if (m_content [currentContent].m_tachie == 0) {
+		//	return null;
+		//}
+		Sprite sprite = m_tachie [m_content [m_currentContent].m_tachie];
+>>>>>>> temp
 		return sprite;
 	}
 
 	static public Sprite LoadBackground ()
 	{
+<<<<<<< HEAD
 		if (m_content [currentContent].m_backGround == 0) {
 			return null;
 		}
 		Sprite background = m_background [m_content [currentContent].m_backGround];
+=======
+		//if (m_content [currentContent].m_backGround == 0) {
+		//	return null;
+		//}
+		Sprite background = m_background [m_content [m_currentContent].m_backGround];
+>>>>>>> temp
 		return background;
 	}
 
 	static public string LoadName ()
 	{
+<<<<<<< HEAD
 		string name = m_content [currentContent].m_name;
+=======
+		string name = m_content [m_currentContent].m_name;
+>>>>>>> temp
 		return name;
 	}
 
 	static public bool IsReading ()
 	{
+<<<<<<< HEAD
 		if (currentContent == m_content.Count - 1) {
 
 			return false;
@@ -83,6 +240,38 @@ static public class DialogPlayer
 			return true;
 		}
 	}
+=======
+		Debug.Log ("m_currentContent : " + m_currentContent);
+		Debug.Log ("m_currentNode " + m_currentNode);
+		Debug.Log (" m_content.Count" + m_content.Count);
+		if (m_currentContent == m_content.Count - 1) {
+
+			m_currentNode++;
+			if (m_currentNode < m_dialogEvent.m_nodeList.Count) {
+
+				Play ();
+			}
+			m_currentContent = -1;
+
+			return false;
+		} else {
+			m_currentContent++;
+			return true;
+		}
+	}
+
+	static public void NextNode ()
+	{
+		m_currentNode++;
+		if (m_currentNode < m_dialogEvent.m_nodeList.Count) {
+
+			Play ();
+		} else {
+			return;
+		}
+
+	}
+>>>>>>> temp
 	////目前运行的事件是否结束
 	//bool IsReadable ()
 	//{
@@ -101,14 +290,25 @@ static public class DialogPlayer
 	static void GetSpriteAsset (List<string> name, List<Sprite> asset)
 	{
 		foreach (string str in name) {
+<<<<<<< HEAD
 			asset.Add (Resources.Load (str) as Sprite);
+=======
+			//Debug.Log (str);
+			//Sprite s = (Sprite)Resources.Load ("UI/" + str, typeof (Sprite));
+			//Debug.Log (s);
+			asset.Add (Resources.Load ("UI/" + str, typeof (Sprite)) as Sprite);
+>>>>>>> temp
 		}
 	}
 
 	static void Clear ()
 	{
 		m_tachie.Clear ();
+<<<<<<< HEAD
 		m_content.Clear ();
+=======
+
+>>>>>>> temp
 		m_background.Clear ();
 
 	}
@@ -164,7 +364,10 @@ public class TalkContent
 	public string m_name;
 	public string m_content;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> temp
 }
 
 public class MonoTalkContent : MonoBehaviour
@@ -263,7 +466,11 @@ public class MonoTalkNode : MonoBehaviour
 
 public class SelectionNode : DialogNode
 {
+<<<<<<< HEAD
 	Dictionary<string, List<TalkContent>> m_selection = new Dictionary<string, List<TalkContent>> ();
+=======
+	public Dictionary<string, TalkNode> m_selection = new Dictionary<string, TalkNode> ();
+>>>>>>> temp
 
 	public SelectionNode (string name) : base (name)
 	{

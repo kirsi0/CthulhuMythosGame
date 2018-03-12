@@ -1,6 +1,12 @@
+// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
+
+<<<<<<< HEAD
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.(2017.3)
+=======
+﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.(2017.3)
+>>>>>>> temp
 Shader "Custom/setting" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
@@ -38,8 +44,13 @@ Shader "Custom/setting" {
  		// put more per-instance properties here
 		UNITY_INSTANCING_BUFFER_END(Props)
 #else
+<<<<<<< HEAD
 		UNITY_INSTANCING_BUFFER_START(Props)
 		UNITY_INSTANCING_BUFFER_END(Props)
+=======
+		UNITY_INSTANCING_BUFFER_START(Props)
+		UNITY_INSTANCING_BUFFER_END(Props)
+>>>>>>> temp
 #endif
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {

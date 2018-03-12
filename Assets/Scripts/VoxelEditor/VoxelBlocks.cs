@@ -77,6 +77,7 @@ public class VoxelBlocks : MonoBehaviour
         if (GetBlockByLogicPos(logicPos) == null)
             return null;
         List<BlockInfo> list = new List<BlockInfo>();
+<<<<<<< HEAD
         List<Vector3> key = new List<Vector3>();
         key.Add(new Vector3((int)logicPos.x+1, (int)logicPos.y, logicPos.z - 1));
         key.Add(new Vector3((int)logicPos.x , (int)logicPos.y+1, logicPos.z - 1));
@@ -96,6 +97,27 @@ public class VoxelBlocks : MonoBehaviour
                     Vector3 n = key[i];
                     n.z += 1;
                     list.Add(GetBlockByLogicPos(n));
+=======
+        for (int i = -1; i <= 1; i++)
+        {
+            for (int j = -1; j <= 1; j++)
+            {
+                // 如果是自己，则跳过
+                if (i == 0 && j == 0)
+                    continue;
+                int x = (int)logicPos.x + i;
+                int y = (int)logicPos.y + j;
+                // 判断是否越界，如果没有，加到列表中
+                if (x < m_mapSize.x && y < m_mapSize.y&&x>=0&&y>=0)
+                {
+                    //判断下方是否有物体
+                    Vector3 key = new Vector3(x, y, logicPos.z-1);
+                    if (m_mapData.ContainsKey(key))
+                    {
+                        key.z++;
+                        list.Add(GetBlockByLogicPos(key));
+                    }
+>>>>>>> temp
                 }
             }
         }

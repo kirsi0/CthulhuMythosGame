@@ -7,13 +7,26 @@ using Skyunion;
 
 public class UIInvestigateScenePanel : UIPanel
 {
+<<<<<<< HEAD
+=======
+	public Text m_noteContent;
+
+	private bool m_isOpen = false;
+>>>>>>> temp
 
 	// Use this for initialization
 	void Start ()
 	{
+<<<<<<< HEAD
 		AddClickEvent ("InvestigatorBook", showBook);
 
 		UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
+=======
+
+		AddClickEvent ("InvestigatorBook", ShowBook);
+
+		//UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
+>>>>>>> temp
 
 		//初始化Scene
 		GameObject.Find ("Scene").GetComponent<Scene> ().SceneInit ();
@@ -22,6 +35,7 @@ public class UIInvestigateScenePanel : UIPanel
 	// Update is called once per frame
 	void Update ()
 	{
+<<<<<<< HEAD
 
 	}
 
@@ -29,6 +43,39 @@ public class UIInvestigateScenePanel : UIPanel
 	{
 		UIManager.Instance ().ShowPanel<UINoteBookPanel> ();
 
+=======
+		if (Input.GetKeyDown (KeyCode.B)) {
+			SwitchBook ();
+		}
+	}
+
+	void ShowBook (BaseEventData eventDate)
+	{
+		SwitchBook ();
+	}
+
+	void SwitchBook ()
+	{
+		m_isOpen = !m_isOpen;
+
+		if (m_isOpen) {
+
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (false);
+			Camera.main.GetComponent<RayCastDetection> ().CloseDetection ();
+
+			UIManager.Instance ().ShowPanel<UINoteBookPanel> ();
+			if (m_noteContent == null) {
+				m_noteContent = GameObject.Find ("UINoteBookPanel/Panel/Note").GetComponent<Text> ();
+			}
+			m_noteContent.text = TmpDate.m_noteContent;
+		} else {
+
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (true);
+			Camera.main.GetComponent<RayCastDetection> ().OpenDetection ();
+
+			UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
+		}
+>>>>>>> temp
 	}
 }
 
@@ -53,6 +100,11 @@ public class Character
 	{
 		m_characterType = type;
 
+<<<<<<< HEAD
+=======
+		m_name = name;
+
+>>>>>>> temp
 		m_str = str;
 		m_obs = obs;
 		m_agi = agi;

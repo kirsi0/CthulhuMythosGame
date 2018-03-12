@@ -78,7 +78,10 @@ public class MoveSystem : BasicSystem
 							move.pathList = path;
 
 							SetPath (move);
+<<<<<<< HEAD
                             move.GetComponent<StateComponent>().AnimationStart();
+=======
+>>>>>>> temp
 							move.pathList = null;
 							move.path = null;
 							input.leftButtonDown = false;
@@ -102,6 +105,7 @@ public class MoveSystem : BasicSystem
 		for (int i = 1; i < move.pathList.Count; i++) {
 			Vector3 pos;
 			pos = map.LogToWorld (move.pathList [i]) - map.LogToWorld (move.pathList [i - 1]);
+<<<<<<< HEAD
             int n = 1;
             Vector3 cPos = pos;
             while(i<move.pathList.Count-1)
@@ -112,6 +116,9 @@ public class MoveSystem : BasicSystem
                 i++;
                 n++;
             };
+=======
+
+>>>>>>> temp
 			Hashtable args = new Hashtable ();
 			float angle = GetAngle (pos);
 			if (Mathf.Abs (angle - oa) > 0.1) {
@@ -123,10 +130,17 @@ public class MoveSystem : BasicSystem
 			pos = RotatePos (pos, -oa);
 			args.Add ("easeType", iTween.EaseType.linear);
 			//移动的整体时间。如果与speed共存那么优先speed
+<<<<<<< HEAD
 			args.Add ("time", move.moveSpeed*n);
 			args.Add ("loopType", "none");
 			args.Add ("delay", time);
 			time += move.moveSpeed*n;
+=======
+			args.Add ("time", move.moveSpeed);
+			args.Add ("loopType", "none");
+			args.Add ("delay", time);
+			time += move.moveSpeed;
+>>>>>>> temp
 			// x y z 标示移动的位置。
 			args.Add ("x", pos.x);
 			args.Add ("z", pos.z);
@@ -137,14 +151,24 @@ public class MoveSystem : BasicSystem
 			if (move.pathList.Count - 1 == i) {
 				int ap = (i - 1) / move.SPD + 1;
                 move.GetComponent<StateComponent>().m_actionPoint -= ap;
+<<<<<<< HEAD
                 move.GetComponent<StateComponent>().Invoke("AnimationEnd", time);
                 args.Add("oncomplete", "MoveEnd");
+=======
+                move.GetComponent<StateComponent>().Invoke("AnimationEnd", time+0.2f);
+                args.Add("oncomplete", "ChangePos");
+>>>>>>> temp
                 args.Add("oncompleteparams", move.pathList[i]);
                 args.Add("oncompletetarget", move.gameObject);
             }
 			iTween.MoveBy (move.gameObject, args);
 		}
+<<<<<<< HEAD
    	}
+=======
+		StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
+	}
+>>>>>>> temp
 
 	private float GetAngle (Vector3 pos)
 	{

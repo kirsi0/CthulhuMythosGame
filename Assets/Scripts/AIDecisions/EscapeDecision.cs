@@ -81,7 +81,11 @@ public class EscapeDecision<T> : BasicDecision<T> where T : BasicEnemy
 		if (AiToInput.CallFriend (entity, enemyList)) {
 			//呼叫成功
 			StateComponent state = entity.GetComponent<StateComponent> ();
+<<<<<<< HEAD
             state.AnimationStart();
+=======
+			StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
+>>>>>>> temp
 			state.m_actionPoint -= 1;
 			state.Invoke ("AnimationEnd", 1);
 			return;

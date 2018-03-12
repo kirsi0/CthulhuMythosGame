@@ -10,6 +10,10 @@ public class StateComponent : BasicComponent
 
 
 	public int m_actionPoint;
+<<<<<<< HEAD
+=======
+
+>>>>>>> temp
 	public override void Init (ComponentType componentType, BasicEntity basicEntity)
 	{
 		base.Init (componentType, basicEntity);
@@ -19,18 +23,28 @@ public class StateComponent : BasicComponent
 
     public void MoveStart(Vector3 logPos)
     {
+<<<<<<< HEAD
         AudioDemo audioDemo = GameObject.Find("Audio").transform.GetComponent<AudioDemo>();
         audioDemo.playVoice(AudioType.Walk);
         VoxelBlocks map = GameObject.Find("Voxel Map").transform.GetComponent<VoxelBlocks>();
         map.ChangePos(GetComponent<BlockInfoComponent>().m_logicPosition, logPos);
     }
 	public void MoveEnd(Vector3 logPos)
+=======
+        VoxelBlocks map = GameObject.Find("Voxel Map").transform.GetComponent<VoxelBlocks>();
+        AudioDemo audioDemo = GameObject.Find("Audio").transform.GetComponent<AudioDemo>();
+        audioDemo.playVoice(AudioType.Walk);
+        map.ChangePos(GetComponent<BlockInfoComponent>().m_logicPosition, logPos);
+    }
+	public void ChangePos(Vector3 logPos)
+>>>>>>> temp
 	{
 		VoxelBlocks map = GameObject.Find ("Voxel Map").transform.GetComponent<VoxelBlocks> ();
         AudioDemo audioDemo = GameObject.Find("Audio").transform.GetComponent<AudioDemo>();
 
         audioDemo.pauseVoice(AudioType.Walk);
 		map.ChangePos (GetComponent<BlockInfoComponent> ().m_logicPosition, logPos);
+<<<<<<< HEAD
 
 	}
     public void ChangePos(Vector3 logPos)
@@ -64,4 +78,17 @@ public class StateComponent : BasicComponent
         else
             StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
     }
+=======
+        BasicEntity entity  = map.GetBlockByLogicPos(logPos).entity;
+        entity.transform.position = map.LogToWorld(logPos); 
+	}
+	public void AnimationEnd ()
+	{
+		//总的行走的步伐除以每AP可移动的速度再+1获得消耗的AP点数
+
+
+		StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Wait;
+	}
+
+>>>>>>> temp
 }

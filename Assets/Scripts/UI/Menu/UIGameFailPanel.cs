@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Skyunion;
 
+<<<<<<< HEAD
 public class UIGameFail : UIMenu
+=======
+public class UIGameFailPanel : UIMenu
+>>>>>>> temp
 {
 
 
@@ -16,8 +20,13 @@ public class UIGameFail : UIMenu
 	void FinishGame ()
 	{
 		SceneManager.Instance ().CloseScene ();
+<<<<<<< HEAD
 		UIManager.Instance ().ClosePanel<UIGameComplete> ();
 		UIManager.Instance ().ShowPanel<UIMainMenu> ();
+=======
+		UIManager.Instance ().ClosePanel<UIGameCompletePanel> ();
+		UIManager.Instance ().ShowPanel<UIMainMenuPanel> ();
+>>>>>>> temp
 
 	}
 }

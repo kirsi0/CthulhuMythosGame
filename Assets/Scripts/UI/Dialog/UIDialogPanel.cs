@@ -6,10 +6,20 @@ using UnityEngine.EventSystems;
 
 using Skyunion;
 
+<<<<<<< HEAD
 public class DialogUI : UIPanel
 {
 	Text m_content;
 	Text m_name;
+=======
+public class UIDialogPanel : UIPanel
+{
+	Text m_content;
+	Text m_name;
+	Image m_tachie;
+	Image m_background;
+
+>>>>>>> temp
 	// Use this for initialization
 	void Start ()
 	{
@@ -18,6 +28,7 @@ public class DialogUI : UIPanel
 		AddClickEvent ("Tachie", UpdateContent);
 
 
+<<<<<<< HEAD
 		m_content = transform.Find ("Content").gameObject.GetComponent<Text> ();
 		m_name = transform.Find ("Name").gameObject.GetComponent<Text> ();
 
@@ -27,6 +38,22 @@ public class DialogUI : UIPanel
 		}
 	}
 
+=======
+		m_content = transform.Find ("Content").GetComponent<Text> ();
+		m_name = transform.Find ("Name").GetComponent<Text> ();
+		m_tachie = transform.Find ("Tachie").GetComponent<Image> ();
+		m_background = transform.Find ("Background").GetComponent<Image> ();
+
+		InitDialog ();
+	}
+
+	public void InitDialog ()
+	{
+		if (DialogPlayer.IsReading ()) {
+			UpdateDialog ();
+		}
+	}
+>>>>>>> temp
 	// Update is called once per frame
 	void Update ()
 	{
@@ -36,6 +63,7 @@ public class DialogUI : UIPanel
 	void UpdateContent (BaseEventData eventData)
 	{
 		if (DialogPlayer.IsReading ()) {
+<<<<<<< HEAD
 			m_content.text = DialogPlayer.LoadContent ();
 			m_name.text = DialogPlayer.LoadName ();
 		} else {
@@ -43,4 +71,25 @@ public class DialogUI : UIPanel
 		}
 
 	}
+=======
+			UpdateDialog ();
+		} else {
+
+			GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (true);
+
+
+			UIManager.Instance ().ClosePanel<UIDialogPanel> ();
+			Camera.main.GetComponent<RayCastDetection> ().OpenDetection ();
+		}
+
+	}
+
+	void UpdateDialog ()
+	{
+		m_content.text = DialogPlayer.LoadContent ();
+		m_name.text = DialogPlayer.LoadName ();
+		m_tachie.sprite = DialogPlayer.LoadTachie ();
+		m_background.sprite = DialogPlayer.LoadBackground ();
+	}
+>>>>>>> temp
 }

@@ -14,16 +14,22 @@ public class MonitorSystem : BasicSystem
             List<BasicEntity> oldEnemy = monitor.m_enemy;
             monitor.m_enemy = new List<BasicEntity>();
             UISimple ui = GameObject.Find("UI").GetComponent<UISimple>();
+<<<<<<< HEAD
             VoxelBlocks map = GameObject.Find("Voxel Map").GetComponent<VoxelBlocks>();
 
             if (monitor.m_view == null || monitor.m_view.Contains(e.GetComponent<BlockInfoComponent>().m_logicPosition))
             {
+=======
+
+            if (monitor.m_view == null || monitor.m_view.Contains(e.GetComponent<BlockInfoComponent>().m_logicPosition)) {
+>>>>>>> temp
                 List<Vector3> list = FindPath.GetArea(e.GetComponent<BlockInfoComponent>().m_logicPosition, monitor.m_SightArea);
                 //获取自身位置
                 Vector3 s = e.GetComponent<BlockInfoComponent>().m_logicPosition;
                 //初始化视野列表
                 monitor.m_view = new List<Vector3>();
                 //获取所有能看到的点
+<<<<<<< HEAD
                 foreach (var pos in list)
                 {
                     if (InView(pos, s))
@@ -67,6 +73,24 @@ public class MonitorSystem : BasicSystem
                             //添加到敌人列表里
                             monitor.m_enemy.Add(entity);
                         }
+=======
+                foreach (var pos in list) {
+                    if (InView(pos, s))
+                        monitor.m_view.Add(pos);
+                }
+                ui.ShowWornArea(e);
+            }
+         
+            VoxelBlocks map = GameObject.Find("Voxel Map").GetComponent<VoxelBlocks>();
+            //查找所有在视野里的玩家
+            foreach (var pos in monitor.m_view) {
+                BasicEntity entity = map.GetBlockByLogicPos(pos).entity;
+                //判断是否为玩家
+                if (entity != null) {
+                    if (entity.GetComponent<BlockInfoComponent>().m_blockType == BlockType.Player && !monitor.m_enemy.Contains(entity)) {
+                        //添加到敌人列表里
+                        monitor.m_enemy.Add(entity);
+>>>>>>> temp
                     }
                 }
             }

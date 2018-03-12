@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UIModule : MonoBehaviour
 {
+<<<<<<< HEAD
 	DialogWriter dialogWriter;
 
 	private void Start ()
@@ -26,6 +27,16 @@ public class UIModule : MonoBehaviour
 		}
 
 	}
+=======
+
+
+	private void Start ()
+	{
+		//AddGameObject ();
+		DialogPlayer.Load ("first");
+	}
+
+>>>>>>> temp
 
 	public void ShowDialogUI ()
 	{
