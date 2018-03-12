@@ -2968,24 +2968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1148490241726368
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4602628042477694}
-  - component: {fileID: 114664000789237622}
-  - component: {fileID: 33370063473204768}
-  - component: {fileID: 23282889842338760}
-  m_Layer: 0
-  m_Name: Brush
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1149063539801594
 GameObject:
   m_ObjectHideFlags: 1
@@ -22587,7 +22569,6 @@ Transform:
   m_Children:
   - {fileID: 4770792010514096}
   - {fileID: 4102112226630632}
-  - {fileID: 4602628042477694}
   m_Father: {fileID: 4164162124167762}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26256,19 +26237,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4102112226630632}
   m_RootOrder: 335
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4602628042477694
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148490241726368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.75, y: 0, z: -16.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4293078553628010}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4602743943080388
 Transform:
@@ -30997,6 +30965,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -39958,40 +39927,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 99b62b378b8d8e7498207fc7f71ab28d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!23 &23282889842338760
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148490241726368}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 0db94d7a178f04741ad894796c0a4705, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63904,13 +63839,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720522816332860}
   m_Mesh: {fileID: 4300000, guid: 0a438a53626f64fb58dea1b96d38a6dd, type: 3}
---- !u!33 &33370063473204768
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148490241726368}
-  m_Mesh: {fileID: 4300000, guid: dac0c5556d6291b4e8612dbdd4d1b9a8, type: 3}
 --- !u!33 &33372919399706322
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -101980,23 +101908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_components: []
---- !u!114 &114664000789237622
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1148490241726368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1978c45c8e7b94f0c9c94e117bc00b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_brushSize: {x: 2.5, y: 2.5, z: 2.5}
-  m_blockID: 131
-  m_meshFilter: {fileID: 33370063473204768}
-  m_meshRender: {fileID: 23282889842338760}
-  m_LogicPosition: {x: 6, y: 11, z: 1}
-  m_tag: Untagged
 --- !u!114 &114664059289191492
 MonoBehaviour:
   m_ObjectHideFlags: 1

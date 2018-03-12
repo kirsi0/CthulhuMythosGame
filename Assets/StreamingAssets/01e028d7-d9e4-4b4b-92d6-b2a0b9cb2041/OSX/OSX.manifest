@@ -1,11 +1,31 @@
 ManifestFileVersion: 0
+<<<<<<< HEAD
+CRC: 3876904680
+=======
 CRC: 855318382
+>>>>>>> temp
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: parkbattlescene
       Dependencies: {}
     Info_1:
+<<<<<<< HEAD
+      Name: uidialogpanel
+      Dependencies: {}
+    Info_2:
+      Name: uigamecompletepanel
+      Dependencies: {}
+    Info_3:
+      Name: uigamefailpanel
+      Dependencies: {}
+    Info_4:
+      Name: uimainmenupanel
+      Dependencies: {}
+    Info_5:
+      Name: uilogo
+      Dependencies: {}
+=======
       Name: residenceinvestigatescene
       Dependencies: {}
     Info_2:
@@ -38,3 +58,4 @@ AssetBundleManifest:
     Info_11:
       Name: investigablemark
       Dependencies: {}
+>>>>>>> temp

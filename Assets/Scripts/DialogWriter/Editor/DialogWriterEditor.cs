@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
 //
+
 [CustomEditor (typeof (MonoDialogWriter))]
 public class DialogWriterEditor : Editor
 {
@@ -12,7 +14,9 @@ public class DialogWriterEditor : Editor
 	public DialogWriter m_dialogWriter;
 
 	string eventName = "";
+
 	//
+
 	public override void OnInspectorGUI ()
 	{
 		base.OnInspectorGUI ();
@@ -21,18 +25,22 @@ public class DialogWriterEditor : Editor
 
 		EditorGUILayout.BeginHorizontal ();
 		if (GUILayout.Button ("LoadXmlDialog")) {
+
 			DialogWriter dialogWriter = XMLUtility.LoadXMLEvent ();
 			m_monoDialogWriter.m_dialogWriter = XMLUtility.LoadXMLEvent ();
 			UpdateWriterTree (m_dialogWriter.m_dialogEventList);
+
 		}
 		if (GUILayout.Button ("SaveXmlDialog")) {
 			XMLUtility.SaveXMLEvent ();
 		}
 
+
 		if (GUILayout.Button ("RefreshDialogTree")) {
 			//手动refresh
 			UpdateWriterTree (m_dialogWriter.m_dialogEventList);
 		}
+
 		EditorGUILayout.EndHorizontal ();
 
 		eventName = (string)EditorGUILayout.TextField ("New Event Name", eventName);
@@ -44,6 +52,7 @@ public class DialogWriterEditor : Editor
 				EditorUtility.DisplayDialog ("Add New Event Fail", "Event name is empty", "Redo");
 			}
 		}
+
 		EditorGUILayout.TextField ("Event Number ", m_dialogWriter.m_dialogEventList.Count.ToString ());
 		for (int i = 0; i < m_dialogWriter.m_dialogEventList.Count; i++) {
 			EditorGUILayout.BeginHorizontal ();
@@ -56,6 +65,7 @@ public class DialogWriterEditor : Editor
 			EditorGUILayout.EndHorizontal ();
 		}
 
+
 		EditorGUILayout.EndVertical ();
 	}
 
@@ -64,11 +74,13 @@ public class DialogWriterEditor : Editor
 		m_monoDialogWriter = target as MonoDialogWriter;
 
 		m_dialogWriter = m_monoDialogWriter.m_dialogWriter;
+
 		Debug.Log (m_dialogWriter.m_dialogEventList);
 		//UpdateWriterTree (m_dialogWriter.m_dialogEventList);
 	}
 
 	//显示所有的子节点
+
 	private void UpdateWriterTree (List<DialogEvent> eventList)
 	{
 		CleanAllEvent ();
@@ -77,6 +89,7 @@ public class DialogWriterEditor : Editor
 
 			MonoDialogEvent monoEvent = ShowEvent (e);
 			foreach (DialogNode n in monoEvent.m_event.m_nodeList) {
+
 				if (n.m_dialogType == DialogNode.NodeType.Talk) {
 					MonoTalkNode monoTalkNode = ShowTalkNode (n, monoEvent);
 					foreach (TalkContent content in monoTalkNode.m_node.m_talkContents) {
@@ -93,6 +106,7 @@ public class DialogWriterEditor : Editor
 							MonoTalkContent monoTalkContent = ShowContent (content, monoTalkNode);
 						}
 					}
+
 				}
 			}
 		}
@@ -110,12 +124,15 @@ public class DialogWriterEditor : Editor
 	}
 
 
+
 	private MonoTalkNode ShowTalkNode (DialogNode node, MonoDialogEvent monoEvent)
+
 	{
 
 		GameObject go = new GameObject (node.m_name + "-" + node.m_dialogType);
 		go.transform.SetParent (monoEvent.transform);
 		go.transform.position = Vector3.zero;
+
 
 		MonoTalkNode talkNode = go.AddComponent<MonoTalkNode> ();
 		talkNode.Init ((TalkNode)node);
@@ -145,6 +162,7 @@ public class DialogWriterEditor : Editor
 		MonoTalkNode talkNode = go.AddComponent<MonoTalkNode> ();
 		talkNode.Init ((TalkNode)node);
 		return talkNode;
+
 
 	}
 
@@ -215,6 +233,7 @@ public class DialogEventEditor : Editor
 		}
 		//添加选择节点
 		EditorGUILayout.TextField ("Node Number ", m_dialogEvent.m_nodeList.Count.ToString ());
+
 		for (int i = 0; i < m_dialogEvent.m_nodeList.Count; i++) {
 			EditorGUILayout.BeginHorizontal ();
 
@@ -225,6 +244,7 @@ public class DialogEventEditor : Editor
 			}
 			EditorGUILayout.EndHorizontal ();
 		}
+
 		EditorGUILayout.EndVertical ();
 
 	}
@@ -279,6 +299,7 @@ public class DialogEventEditor : Editor
 		}
 	}
 }
+
 [CustomEditor (typeof (MonoSelectionNode))]
 public class SelectionNodeEditor : Editor
 {
@@ -360,6 +381,7 @@ public class SelectionNodeEditor : Editor
 	}
 }
 
+
 [CustomEditor (typeof (MonoTalkNode))]
 public class TalkNodeEditor : Editor
 {
@@ -390,7 +412,9 @@ public class TalkNodeEditor : Editor
 			m_talkNode.m_background.Add (m_background.name);
 		}
 		if (m_talkNode != null) {
+
 			EditorGUILayout.TextField ("Asset Number", (m_talkNode.m_background.Count + m_talkNode.m_tachie.Count).ToString ());
+
 
 			for (int i = 0; i < m_talkNode.m_tachie.Count; i++) {
 				EditorGUILayout.BeginHorizontal ();
@@ -412,6 +436,7 @@ public class TalkNodeEditor : Editor
 			}
 		}
 
+
 		//添加选择节点
 		EditorGUILayout.TextField ("Node Number ", m_talkNode.m_talkContents.Count.ToString ());
 		for (int i = 0; i < m_talkNode.m_talkContents.Count; i++) {
@@ -424,6 +449,7 @@ public class TalkNodeEditor : Editor
 			}
 			EditorGUILayout.EndHorizontal ();
 		}
+
 		EditorGUILayout.EndVertical ();
 	}
 
@@ -492,11 +518,15 @@ public class TalkContentEditor : Editor
 		m_monoTalkConten = target as MonoTalkContent;
 		m_talkContent = m_monoTalkConten.m_talkContent;
 
+
 		//ShowContent ();
+
 	}
 
 	void ShowContent ()
 	{
+
 		m_monoTalkConten.gameObject.name = m_talkContent.m_name + "+" + m_talkContent.GetType ();
+
 	}
 }

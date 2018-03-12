@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Skyunion;
+
 public class UIGameCompletePanel : UIMenu
+
 {
 
 
@@ -14,8 +16,10 @@ public class UIGameCompletePanel : UIMenu
 	void FinishGame ()
 	{
 		SceneManager.Instance ().CloseScene ();
+
 		UIManager.Instance ().ClosePanel<UIGameCompletePanel> ();
 		UIManager.Instance ().ShowPanel<UIMainMenuPanel> ();
+
 
 	}
 }

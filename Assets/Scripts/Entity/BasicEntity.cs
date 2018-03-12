@@ -29,8 +29,9 @@ public class BasicEntity : MonoBehaviour
 	public BasicComponent AddComponent (ComponentType type)
 	{
 		if (ExistSpecialComponent (type)) {
-			Debug.Log ("Exist same component Type" + type);
-			return GetSpecicalComponent (type);
+            //Debug.Log("Exist same component Type" + type);
+            return GetSpecicalComponent (type);
+
 		}
 		//Debug.Log ("Add component" + type + " in " + gameObject);
 

@@ -31,6 +31,14 @@ public static class Probability
 	}
 
 }
+
+public enum EnemyState
+{
+    Select,     //状态管理什么都不做，等待玩家输入
+    Action,     //动画执行时调用，卸载所有的临时组件
+    Wait        //回合管理开始执行，选择下一个角色，加入所需的组件
+}
+
 public class AIComponent : BasicComponent
 {
 	public enum Decision
@@ -46,6 +54,10 @@ public class AIComponent : BasicComponent
 	public BasicEnemy m_enemy;
 	public Decision m_currentDecision = Decision.Null;
 	public List<Vector3> m_patrolPoint = new List<Vector3> ();
+
+    public EnemyState m_enemyState = EnemyState.Wait;
+    public float m_actionInterval=1;
+    public float m_coldTime=0;
 
 
 }

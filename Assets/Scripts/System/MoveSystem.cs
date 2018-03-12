@@ -78,6 +78,8 @@ public class MoveSystem : BasicSystem
 							move.pathList = path;
 
 							SetPath (move);
+                            move.GetComponent<StateComponent>().AnimationStart();
+
 							move.pathList = null;
 							move.path = null;
 							input.leftButtonDown = false;
@@ -101,6 +103,16 @@ public class MoveSystem : BasicSystem
 		for (int i = 1; i < move.pathList.Count; i++) {
 			Vector3 pos;
 			pos = map.LogToWorld (move.pathList [i]) - map.LogToWorld (move.pathList [i - 1]);
+            int n = 1;
+            Vector3 cPos = pos;
+            while(i<move.pathList.Count-1)
+            {
+                if (cPos != (map.LogToWorld(move.pathList[i+1]) - map.LogToWorld(move.pathList[i])))
+                    break;
+                pos+=cPos;
+                i++;
+                n++;
+            };
 
 			Hashtable args = new Hashtable ();
 			float angle = GetAngle (pos);
@@ -113,10 +125,10 @@ public class MoveSystem : BasicSystem
 			pos = RotatePos (pos, -oa);
 			args.Add ("easeType", iTween.EaseType.linear);
 			//移动的整体时间。如果与speed共存那么优先speed
-			args.Add ("time", move.moveSpeed);
+			args.Add ("time", move.moveSpeed*n);
 			args.Add ("loopType", "none");
 			args.Add ("delay", time);
-			time += move.moveSpeed;
+			time += move.moveSpeed*n;
 			// x y z 标示移动的位置。
 			args.Add ("x", pos.x);
 			args.Add ("z", pos.z);
@@ -127,15 +139,17 @@ public class MoveSystem : BasicSystem
 			if (move.pathList.Count - 1 == i) {
 				int ap = (i - 1) / move.SPD + 1;
                 move.GetComponent<StateComponent>().m_actionPoint -= ap;
-                move.GetComponent<StateComponent>().Invoke("AnimationEnd", time+0.2f);
-                args.Add("oncomplete", "ChangePos");
+                move.GetComponent<StateComponent>().Invoke("AnimationEnd", time);
+                args.Add("oncomplete", "MoveEnd");
+
                 args.Add("oncompleteparams", move.pathList[i]);
                 args.Add("oncompletetarget", move.gameObject);
             }
 			iTween.MoveBy (move.gameObject, args);
 		}
-		StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
-	}
+
+   	}
+
 
 	private float GetAngle (Vector3 pos)
 	{

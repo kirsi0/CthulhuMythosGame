@@ -19,7 +19,9 @@ public class UILogo : UIDialog
 		background.DOFade (1.0f, time).OnComplete (
 			() => {
 				Skyunion.UIManager.Instance ().CloseUI ();
+
 				Skyunion.UIManager.Instance ().ShowPanel<UIMainMenuPanel> ();
+
 			});
 		//background.color.DOFlip();
 	}

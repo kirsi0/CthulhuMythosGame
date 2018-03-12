@@ -123,10 +123,10 @@ static public class FindPath
                 return generatePath(curNode);
             }
 
-
             // 判断周围节点，选择一个最优的节点
             foreach (var block in voxelBlocks.GetNeibor(curNode.m_logPos))
             {
+                
                 NodeItem item=BItoNI(block.logPos);
                 // 如果是墙或者已经在关闭列表中
 
@@ -136,6 +136,9 @@ static public class FindPath
                 }
                 // 计算当前相领节点现开始节点距离
                 int newCost = curNode.gCost + getDistanceNodes(curNode, item);
+                if (block.logPos.x != curNode.m_logPos.x && block.logPos.y != curNode.m_logPos.y)
+                    newCost += (int)(5 * voxelBlocks.m_blockSize.x);
+
                 // 如果距离更小，或者原来不在开始列表中
                 if (newCost < item.gCost || !ContainsNode(openSet,item))
                 {

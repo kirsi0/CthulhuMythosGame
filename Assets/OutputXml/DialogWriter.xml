@@ -1,8 +1,15 @@
 <DialogWriter>
   <Event Name="first" EvenOrder="0">
     <TalkNode Name="meet" NodeType="Talk">
+<<<<<<< HEAD
+      <Background Name="10" />
+      <Background Name="Panel" />
+      <Tachie Name="9" />
+      <Tachie Name="exit" />
+=======
       <Background Name="DarkHouseBackground" />
       <Tachie Name="1487744152-1575013499" />
+>>>>>>> temp
       <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="我们已经到达了目标地点，看起来是个不祥的地方。" />
       <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="或许有一些我们从未见过的邪恶力量依旧盘踞在这。" />
       <TalkContent Background="0" Tachie="0" Name="爱丽丝" Content="当是我们会击败它们，就和过去一样。" />
@@ -12,6 +19,8 @@
       <TalkContent Background="0" Tachie="0" Name="游戏教程" Content="最后是最重要的一点：不论遇到什么问题，您可以使用T打开游戏提示，其中具体描述了游戏的所有操作，请根据其中的提示来进行游戏吧。" />
     </TalkNode>
   </Event>
+<<<<<<< HEAD
+=======
   <Event Name="LockedDoor" EvenOrder="0">
     <TalkNode Name="Info" NodeType="Talk">
       <Background Name="DarkHouseBackground" />
@@ -95,4 +104,5 @@
       </Select>
     </SelectionNode>
   </Event>
+>>>>>>> temp
 </DialogWriter>

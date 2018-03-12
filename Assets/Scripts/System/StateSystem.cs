@@ -13,7 +13,11 @@ static class StateStaticComponent
 	public static float afkLimiteTime = 2;
 	public static SystemState m_currentSystemState = SystemState.Wait;
 	public static BasicEntity m_currentEntity = null;
+    public static SystemState m_EcurrentSystemState = SystemState.Wait;
+    public static BasicEntity m_EcurrentEntity = null;
 	public static int m_turneNumber = 0;
+    public static int m_EturnNumber = 0;
+
 	public static List<BasicEntity> enemyActionList;
 	public static List<BasicEntity> playerActionList;
 }
@@ -101,24 +105,34 @@ public class StateSystem : BasicSystem
 
 	public override void Execute (List<BasicEntity> entities)
 	{
-		if (StateStaticComponent.m_currentSystemState == StateStaticComponent.SystemState.Action) {
+        if(StateStaticComponent.m_currentEntity != null &&StateStaticComponent.m_currentEntity.GetComponent<InputComponent>() != null 
+            && StateStaticComponent.m_currentEntity.GetComponent<InputComponent>().currentKey == (int)InputType.NextOne)
+        {
+            AbilityManager abilityManager = new AbilityManager();
+            abilityManager.RemoveTemppraryComponent(StateStaticComponent.m_currentEntity);
+            StateStaticComponent.m_currentEntity = NextOne(playerActionList, StateStaticComponent.m_currentEntity);
+            abilityManager.AddTemporaryComponent(StateStaticComponent.m_currentEntity);
+        }
+        if (StateStaticComponent.m_currentSystemState == StateStaticComponent.SystemState.Action) {
 			//Debug.Log (StateStaticComponent.m_currentEntity + " aciont is going");
 			AbilityManager abilityManager = new AbilityManager ();
 			abilityManager.RemoveTemppraryComponent (StateStaticComponent.m_currentEntity);
 			StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Select;
 		}
 
-		//只有在系统结束工作之后才会重新开始执行
-		if (StateStaticComponent.m_currentSystemState == StateStaticComponent.SystemState.Wait) {
+
+        //只有在系统结束工作之后才会重新开始执行
+        if (StateStaticComponent.m_currentSystemState == StateStaticComponent.SystemState.Wait ){
 			StateStaticComponent.m_turneNumber++;
 			//Debug.Log ("New check is going");
 			//如果现在的角色已经死亡或者是行动点耗尽则出队列
 			//RemoveDead ();
 			//重新排序行动队列
-			InitActionList (entities);
+
+			InitPlayerActionList (entities);
 
 			//选择当前可以行动的角色
-			UpdateCurrentEntity ();
+			UpdateCurrentEntity (playerActionList);
 
 			StateComponent state = (StateComponent)StateStaticComponent.m_currentEntity.GetSpecicalComponent (ComponentType.State);
 			AbilityManager abilityManager = new AbilityManager ();
@@ -132,10 +146,9 @@ public class StateSystem : BasicSystem
 			//切换状态
 			StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Select;
 		}
+    }
 
-
-	}
-	/*
+    /*
 	private void RemoveDead ()
 	{
 		StateComponent state = (StateComponent)StateStaticComponent.m_currentEntity.GetSpecicalComponent (ComponentType.State);
@@ -149,64 +162,103 @@ public class StateSystem : BasicSystem
 		}
 	}
 */
-	private void InitActionList (List<BasicEntity> entities)
-	{
+    private BasicEntity NextOne(List<BasicEntity> entitis,BasicEntity entity)
+    {
+        int i = 0;
+        for (i = 0; i < entitis.Count; i++)
+        {
+            if (entitis[i] == entity)
+                break;
+        }
+        if (i == entitis.Count)
+            return entity;
+        if (i == entitis.Count - 1)
+            i = -1;
+        return entitis[i + 1];
+    }
+    private void InitPlayerActionList(List<BasicEntity> entities)
+    {
+        playerActionList.Clear();
+        //获取实体
+        foreach (BasicEntity e in entities)
+        {
+            DeadComponent deadComp = (DeadComponent)e.GetSpecicalComponent(ComponentType.Dead);
+            StateComponent stateComponent = (StateComponent)e.GetSpecicalComponent(ComponentType.State);
+            if (deadComp != null && deadComp.hp <= 0)
+            {
+                continue;
+            }
+            PropertyComponent PropertyComponent = (PropertyComponent)e.GetSpecicalComponent(ComponentType.Property);
 
-		enemyActionList.Clear ();
-		playerActionList.Clear ();
-		//获取实体
-		foreach (BasicEntity e in entities) {
-			DeadComponent deadComp = (DeadComponent)e.GetSpecicalComponent (ComponentType.Dead);
-			StateComponent stateComponent = (StateComponent)e.GetSpecicalComponent (ComponentType.State);
-			if (deadComp != null && deadComp.hp <= 0) {
-				continue;
-			}
-			PropertyComponent PropertyComponent = (PropertyComponent)e.GetSpecicalComponent (ComponentType.Property);
+            if (PropertyComponent.m_characterType == PropertyComponent.CharacterType.Veteran ||
+                PropertyComponent.m_characterType == PropertyComponent.CharacterType.Hacker ||
+                PropertyComponent.m_characterType == PropertyComponent.CharacterType.Drone)
+            {
+                //将实体入列
+                playerActionList.Add(e);
+            }
+        }
+        if (playerActionList.Count == 0)
+        {
+            Skyunion.UIManager.Instance().ShowPanel<UIGameFailPanel>();
+        }
+        //TODO：后续修改
+        playerActionList.Sort(delegate (BasicEntity x, BasicEntity y) {
+            PropertyComponent stateX = (PropertyComponent)x.GetSpecicalComponent(ComponentType.Property);
+            PropertyComponent stateY = (PropertyComponent)y.GetSpecicalComponent(ComponentType.Property);
+            Debug.Log("stateX.m_agility : " + stateX.m_agility + "stateY.m_agility" + stateY.m_agility);
+            return -stateX.m_agility.CompareTo(stateY.m_agility);
+        });
 
-			if (PropertyComponent.m_characterType == PropertyComponent.CharacterType.Veteran ||
-				PropertyComponent.m_characterType == PropertyComponent.CharacterType.Hacker ||
-				PropertyComponent.m_characterType == PropertyComponent.CharacterType.Drone) {
-				//将实体入列
-				playerActionList.Add (e);
-			} else if (PropertyComponent.m_characterType == PropertyComponent.CharacterType.Heretic ||
-					   PropertyComponent.m_characterType == PropertyComponent.CharacterType.Deepone) {
-				enemyActionList.Add (e);
-			}
-		}
-		if (enemyActionList.Count == 0) {
-			Skyunion.UIManager.Instance ().ShowPanel<UIGameCompletePanel> ();
-		}
-		if (playerActionList.Count == 0) {
-			Skyunion.UIManager.Instance ().ShowPanel<UIGameFailPanel> ();
-		}
-		//TODO：后续修改
-		enemyActionList.Sort (delegate (BasicEntity x, BasicEntity y) {
-			PropertyComponent stateX = (PropertyComponent)x.GetSpecicalComponent (ComponentType.Property);
-			PropertyComponent stateY = (PropertyComponent)y.GetSpecicalComponent (ComponentType.Property);
-			Debug.Log ("stateX.m_agility : " + stateX.m_agility + "stateY.m_agility" + stateY.m_agility);
-			return -stateX.m_agility.CompareTo (stateY.m_agility);
-		});
+        foreach (BasicEntity e in playerActionList)
+        {
+            Debug.Log(e.gameObject.name + "->");
 
-		playerActionList.Sort (delegate (BasicEntity x, BasicEntity y) {
-			PropertyComponent stateX = (PropertyComponent)x.GetSpecicalComponent (ComponentType.Property);
-			PropertyComponent stateY = (PropertyComponent)y.GetSpecicalComponent (ComponentType.Property);
-			Debug.Log ("stateX.m_agility : " + stateX.m_agility + "stateY.m_agility" + stateY.m_agility);
-			return -stateX.m_agility.CompareTo (stateY.m_agility);
-		});
+        }
+        StateStaticComponent.playerActionList = playerActionList;
+        //确定现在在行动的角色1.是否又有角色在行动。2，角色的行动点是否已经耗尽
 
-		foreach (BasicEntity e in playerActionList) {
-			Debug.Log (e.gameObject.name + "->");
+    }
+    private void InitEnemyActionList(List<BasicEntity> entities)
+    {
+        enemyActionList.Clear();
+        foreach (BasicEntity e in entities)
+        {
+            DeadComponent deadComp = (DeadComponent)e.GetSpecicalComponent(ComponentType.Dead);
+            StateComponent stateComponent = (StateComponent)e.GetSpecicalComponent(ComponentType.State);
+            if (deadComp != null && deadComp.hp <= 0)
+            {
+                continue;
+            }
+            PropertyComponent PropertyComponent = (PropertyComponent)e.GetSpecicalComponent(ComponentType.Property);
 
-		}
-		foreach (BasicEntity e in enemyActionList) {
-			Debug.Log (e.gameObject.name + "->");
+            if (PropertyComponent.m_characterType == PropertyComponent.CharacterType.Heretic ||
+                     PropertyComponent.m_characterType == PropertyComponent.CharacterType.Deepone)
+            {
+                enemyActionList.Add(e);
+            }
+        }
+        if (enemyActionList.Count == 0)
+        {
+            Skyunion.UIManager.Instance().ShowPanel<UIGameCompletePanel>();
+        }
+        //TODO：后续修改
+        enemyActionList.Sort(delegate (BasicEntity x, BasicEntity y) {
+            PropertyComponent stateX = (PropertyComponent)x.GetSpecicalComponent(ComponentType.Property);
+            PropertyComponent stateY = (PropertyComponent)y.GetSpecicalComponent(ComponentType.Property);
+            Debug.Log("stateX.m_agility : " + stateX.m_agility + "stateY.m_agility" + stateY.m_agility);
+            return -stateX.m_agility.CompareTo(stateY.m_agility);
+        });
 
-		}
-		StateStaticComponent.enemyActionList = enemyActionList;
-		StateStaticComponent.playerActionList = playerActionList;
-		//确定现在在行动的角色1.是否又有角色在行动。2，角色的行动点是否已经耗尽
+        foreach (BasicEntity e in enemyActionList)
+        {
+            Debug.Log(e.gameObject.name + "->");
 
-	}
+        }
+        StateStaticComponent.enemyActionList = enemyActionList; 
+        //确定现在在行动的角色1.是否又有角色在行动。2，角色的行动点是否已经耗尽
+    }
+
 	/*
 	private void InitActionPoint ()
 	{
@@ -255,46 +307,27 @@ public class StateSystem : BasicSystem
 			}
 		}
 	}
-	private void UpdateCurrentEntity ()
-	{
-		//if (playerActionList.Count == 0 && enemyActionList.Count == 0) {
-		//	Debug.Log ("Error, the num of character is 0");
-		//	return;
-		//}
-		//如果当前的是玩家行动
-		if (currentparty == Party.Player) {
-			for (int i = 0; i < playerActionList.Count; i++) {
-				StateComponent state = (StateComponent)playerActionList [i].GetSpecicalComponent (ComponentType.State);
-				if (state.m_actionPoint != 0) {
-					currentparty = Party.Player;
-					StateStaticComponent.m_currentEntity = playerActionList [i];
-					return;
-				}
-			}
-			//如果没有找到合适的角色，那么就换到敌人回合行动
-			currentparty = Party.Enemy;
-			//重新填充行动点 
-			InitActionPoint (playerActionList);
-			//重新调用
-			UpdateCurrentEntity ();
-			return;
-		}
-
-		if (currentparty == Party.Enemy) {
-			for (int i = 0; i < enemyActionList.Count; i++) {
-				StateComponent state = (StateComponent)enemyActionList [i].GetSpecicalComponent (ComponentType.State);
-				if (state.m_actionPoint != 0) {
-					currentparty = Party.Enemy;
-					StateStaticComponent.m_currentEntity = enemyActionList [i];
-					return;
-				}
-			}
-			currentparty = Party.Player;
-			InitActionPoint (enemyActionList);
-			UpdateCurrentEntity ();
-			return;
-		}
-	}
+    private void UpdateCurrentEntity(List<BasicEntity> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            StateComponent state = (StateComponent)list[i].GetSpecicalComponent(ComponentType.State);
+            if (state.m_actionPoint != 0)
+            {
+                if (state.GetComponent<BlockInfoComponent>().m_blockType == BlockType.Player)
+                    StateStaticComponent.m_currentEntity = list[i];
+                else
+                    StateStaticComponent.m_EcurrentEntity = list[i];
+                return;
+            }
+        }
+        //重新填充行动点 
+        InitActionPoint(list);
+        //重新调用
+        UpdateCurrentEntity(list);
+        return;
+    }
+	
 
 
 }

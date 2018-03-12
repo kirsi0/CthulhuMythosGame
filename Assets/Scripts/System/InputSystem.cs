@@ -27,29 +27,32 @@ public class InputSystem :BasicSystem {
         
         foreach(var entity in entities)
         {                
+
             InputComponent input = entity.GetComponent<InputComponent>();
             //过滤所有AI控制的角色
-            if (ck == (int)InputType.StopTurn)
-            {
-                StateComponent state = entity.GetComponent<StateComponent>();
-                state.m_actionPoint = 0;
-                state.Invoke("AnimationEnd", 0.5f);
-                StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
-            }
 
             if (entity.GetComponent<BlockInfoComponent>().m_blockType == BlockType.Enemy)
             {
                 //一旦AI出现问题，过久未操作就进行强制操作
                 if (input.afkTime > StateStaticComponent.afkLimiteTime)
                 {
-                    StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
                     StateComponent state = entity.GetComponent<StateComponent>();
+                    state.AnimationStart();
                     state.m_actionPoint -= 1;
                     state.Invoke("AnimationEnd", 0.5f);
                 }
                 input.afkTime += Time.deltaTime;
                 continue;
             }
+            if (ck == (int)InputType.StopTurn)
+            {
+                StateComponent state = entity.GetComponent<StateComponent>();
+                state.m_actionPoint = 0;
+                state.Invoke("AnimationEnd", 0.5f);
+                state.AnimationStart();
+                StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
+            }
+
             if (ck != 0)
             {
                 input.currentKey = ck;

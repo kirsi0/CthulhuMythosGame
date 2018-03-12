@@ -27,8 +27,10 @@ namespace Skyunion
 			mBox = AddGameObject ("box");
 			mDialog = AddGameObject ("dialog");
 
+
 			ShowUI<UILogo> ();
 			//ShowPanel<UIInvestigateScenePanel> ();
+
 		}
 
 		public void ShowUI<T> (bool bPushHistory = true, Dictionary<string, object> varList = null) where T : UIDialog
@@ -81,7 +83,9 @@ namespace Skyunion
 		public void ShowPanel<T> (Dictionary<string, object> varList = null) where T : UIPanel
 		{
 			string name = typeof (T).ToString ();
+
 			Debug.Log (name);
+
 			var panelTran = mPanel.transform.Find (name);
 			GameObject uiObject;
 			if (panelTran == null) {

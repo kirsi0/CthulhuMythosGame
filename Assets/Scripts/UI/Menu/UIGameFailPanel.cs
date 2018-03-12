@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Skyunion;
 
+
 public class UIGameFailPanel : UIMenu
+
 {
 
 
@@ -16,6 +18,7 @@ public class UIGameFailPanel : UIMenu
 	void FinishGame ()
 	{
 		SceneManager.Instance ().CloseScene ();
+
 		UIManager.Instance ().ClosePanel<UIGameCompletePanel> ();
 		UIManager.Instance ().ShowPanel<UIMainMenuPanel> ();
 

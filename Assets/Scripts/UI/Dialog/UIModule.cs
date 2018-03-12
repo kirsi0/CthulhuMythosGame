@@ -7,11 +7,13 @@ public class UIModule : MonoBehaviour
 {
 
 
+
 	private void Start ()
 	{
 		//AddGameObject ();
 		DialogPlayer.Load ("first");
 	}
+
 
 
 	public void ShowDialogUI ()

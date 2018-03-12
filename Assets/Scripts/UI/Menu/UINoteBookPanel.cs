@@ -23,8 +23,10 @@ public class UINoteBookPanel : UIPanel
 
 	void CloseNote ()
 	{
+
 		GameObject.Find ("RigidBodyFPSController").GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController> ().mouseLook.SetCursorLock (true);
 		Camera.main.GetComponent<RayCastDetection> ().OpenDetection ();
+
 
 		UIManager.Instance ().ClosePanel<UINoteBookPanel> ();
 	}

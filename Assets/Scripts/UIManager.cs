@@ -5,6 +5,7 @@ using Skyunion;
 
 static public class DialogPlayer
 {
+
 	static DialogWriter dialogWriter;
 	//临时保存
 	static DialogEvent m_dialogEvent;
@@ -140,35 +141,43 @@ static public class DialogPlayer
 	static public string LoadContent ()
 	{
 		string content = m_content [m_currentContent].m_content;
+
 		return content;
 	}
 
 	static public Sprite LoadTachie ()
 	{
+
 		//if (m_content [currentContent].m_tachie == 0) {
 		//	return null;
 		//}
 		Sprite sprite = m_tachie [m_content [m_currentContent].m_tachie];
+
 		return sprite;
 	}
 
 	static public Sprite LoadBackground ()
 	{
+
 		//if (m_content [currentContent].m_backGround == 0) {
 		//	return null;
 		//}
 		Sprite background = m_background [m_content [m_currentContent].m_backGround];
+
 		return background;
 	}
 
 	static public string LoadName ()
 	{
+
 		string name = m_content [m_currentContent].m_name;
+
 		return name;
 	}
 
 	static public bool IsReading ()
 	{
+
 		Debug.Log ("m_currentContent : " + m_currentContent);
 		Debug.Log ("m_currentNode " + m_currentNode);
 		Debug.Log (" m_content.Count" + m_content.Count);
@@ -199,6 +208,7 @@ static public class DialogPlayer
 		}
 
 	}
+
 	////目前运行的事件是否结束
 	//bool IsReadable ()
 	//{
@@ -217,10 +227,12 @@ static public class DialogPlayer
 	static void GetSpriteAsset (List<string> name, List<Sprite> asset)
 	{
 		foreach (string str in name) {
+
 			//Debug.Log (str);
 			//Sprite s = (Sprite)Resources.Load ("UI/" + str, typeof (Sprite));
 			//Debug.Log (s);
 			asset.Add (Resources.Load ("UI/" + str, typeof (Sprite)) as Sprite);
+
 		}
 	}
 
@@ -282,6 +294,7 @@ public class TalkContent
 	public int m_tachie;
 	public string m_name;
 	public string m_content;
+
 
 }
 
@@ -381,7 +394,9 @@ public class MonoTalkNode : MonoBehaviour
 
 public class SelectionNode : DialogNode
 {
+
 	public Dictionary<string, TalkNode> m_selection = new Dictionary<string, TalkNode> ();
+
 
 	public SelectionNode (string name) : base (name)
 	{

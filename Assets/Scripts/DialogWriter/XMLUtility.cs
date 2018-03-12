@@ -6,6 +6,7 @@ using System.Xml;
 
 public static class XMLUtility
 {
+
 	//保存路径
 
 	public static string path = Application.dataPath + "/OutputXml/dialogWriter.xml";
@@ -54,6 +55,7 @@ public static class XMLUtility
 
 				} else if (reader.LocalName == "Event") {
 
+
 					newDialogEvent = new DialogEvent ("");
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
@@ -63,12 +65,14 @@ public static class XMLUtility
 							newDialogEvent.m_eventOrder = int.Parse (reader.Value);
 						}
 					}
+
 					if (newDialogWriter != null) {
 						newDialogWriter.m_dialogEventList.Add (newDialogEvent);
 					}
 				} else if (reader.LocalName == "TalkNode") {
 
 					newTalkNode = new TalkNode ("");
+
 
 					for (int i = 0; i < reader.AttributeCount; i++) {
 						reader.MoveToAttribute (i);
@@ -79,6 +83,7 @@ public static class XMLUtility
 							newTalkNode.m_dialogType = (DialogNode.NodeType)System.Enum.Parse (typeof (DialogNode.NodeType), reader.Value);
 						}
 					}
+
 					//不是选择分支下的对话节点
 					if (m_isTalkNode) {
 						if (newDialogEvent != null) {
@@ -91,6 +96,7 @@ public static class XMLUtility
 							m_isTalkNode = true;
 						}
 					}
+
 
 				} else if (reader.LocalName == "Background") {
 					for (int i = 0; i < reader.AttributeCount; i++) {
@@ -201,6 +207,7 @@ public static class XMLUtility
 		return writer;
 	}
 
+
 	//从mono中提取对象并保存到临时对象中，并加入上一级的临时对象的子对象中
 	static void WriteDialogEvent (Transform monoDialogEvent, int eventOrder)
 	{
@@ -252,11 +259,12 @@ public static class XMLUtility
 	{
 		DialogWriter dialogWriter = ProduceWriter ();
 		//保存路径
+
 		path = Application.dataPath + "/OutputXml/" + dialogWriter.GetType () + ".xml";
 		FileInfo fi = new FileInfo (path);
 
 		if (fi.Exists) {
-			//Debug.Log ("dsadasdsdasdadadasdasdasdwdw");
+
 			//fi.MoveTo ("./backup");
 			fi.Delete ();
 		}
@@ -271,6 +279,7 @@ public static class XMLUtility
 			eve.SetAttribute ("Name", dialogEvent.m_name);
 			eve.SetAttribute ("EvenOrder", dialogEvent.m_eventOrder.ToString ());
 			for (int j = 0; j < dialogEvent.m_nodeList.Count; j++) {
+
 
 				//判断是否为talk节点
 				if (dialogEvent.m_nodeList [j].m_dialogType == DialogNode.NodeType.Talk) {
@@ -352,5 +361,7 @@ public static class XMLUtility
 
 		doc.Save (path);
 	}
+
 }
+
 

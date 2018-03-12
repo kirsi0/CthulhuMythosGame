@@ -46,7 +46,6 @@ public class AttackSystem : BasicSystem
 			UISimple ui = GameObject.Find ("UI").GetComponent<UISimple> ();
 			ui.ShowUI (el, 2);
 
-
 			//左键攻击
 			if (input.leftButtonDown) {
                 BasicEntity enemy = map.GetBlockByLogicPos(input.currentPos).entity;
@@ -63,7 +62,7 @@ public class AttackSystem : BasicSystem
 				dead.hp -= attack.STR;
 				state.m_actionPoint -= 1;
 				state.Invoke ("AnimationEnd", 1);
-				StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
+                state.AnimationStart();
 				//播放攻击动画
 				//播放敌人受击动画
 				//减少AP

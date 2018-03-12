@@ -52,7 +52,8 @@ public class KnockSystem : BasicSystem {
                 ui.ShowUI(null, 3);
                 StateComponent state = entity.GetComponent<StateComponent>();
                 state.m_actionPoint -= 1;
-                StateStaticComponent.m_currentSystemState = StateStaticComponent.SystemState.Action;
+                state.AnimationStart();
+
                 state.Invoke("AnimationEnd", 1);
             }
         

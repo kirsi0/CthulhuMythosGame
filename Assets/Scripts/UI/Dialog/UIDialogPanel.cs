@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 using Skyunion;
 
+
 public class UIDialogPanel : UIPanel
 {
 	Text m_content;
@@ -13,12 +14,14 @@ public class UIDialogPanel : UIPanel
 	Image m_tachie;
 	Image m_background;
 
+
 	// Use this for initialization
 	void Start ()
 	{
 		AddClickEvent ("Content", UpdateContent);
 		AddClickEvent ("Background", UpdateContent);
 		AddClickEvent ("Tachie", UpdateContent);
+
 
 
 		m_content = transform.Find ("Content").GetComponent<Text> ();
@@ -35,6 +38,7 @@ public class UIDialogPanel : UIPanel
 			UpdateDialog ();
 		}
 	}
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -44,6 +48,7 @@ public class UIDialogPanel : UIPanel
 	void UpdateContent (BaseEventData eventData)
 	{
 		if (DialogPlayer.IsReading ()) {
+
 			UpdateDialog ();
 		} else {
 
@@ -63,4 +68,5 @@ public class UIDialogPanel : UIPanel
 		m_tachie.sprite = DialogPlayer.LoadTachie ();
 		m_background.sprite = DialogPlayer.LoadBackground ();
 	}
+
 }
