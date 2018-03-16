@@ -35,9 +35,11 @@ public class VoxelMapEditor : Editor
 	public override void OnInspectorGUI ()
 	{
 
-
 		//不需要base.OnInspectorGUI ();
 		EditorGUILayout.BeginVertical ();
+
+		EditorGUILayout.TextArea ("你没有用过的床新版本：使用j键旋转模型.");
+
 
 		bool oldUpperLayer = voxelMap.isUpperLayer;
 		voxelMap.isUpperLayer = EditorGUILayout.Toggle ("is up layer:", voxelMap.isUpperLayer);
@@ -93,22 +95,16 @@ public class VoxelMapEditor : Editor
 						voxelMap.allBlocks.Add (wallBlock);
 						break;
 
-					case BlockType.Player:
-						PlayerBlock playerBlock = new PlayerBlock (blockName);
-						playerBlock.BlockType = BlockType.Player;
-						voxelMap.allBlocks.Add (playerBlock);
-						break;
-
-					case BlockType.Enemy:
-						EnemyBlock enemyBlock = new EnemyBlock (blockName);
-						enemyBlock.BlockType = BlockType.Enemy;
-						voxelMap.allBlocks.Add (enemyBlock);
-						break;
 
 					case BlockType.Door:
 						DoorBlock doorBlock = new DoorBlock (blockName);
 						doorBlock.BlockType = BlockType.Door;
 						voxelMap.allBlocks.Add (doorBlock);
+						break;
+
+					default:
+						EditorUtility.DisplayDialog ("此类型不支持在该编辑器中编辑", "如果是角色类型请在子对象角色编辑器中操作。", "确定");
+
 						break;
 					}
 
@@ -183,6 +179,19 @@ public class VoxelMapEditor : Editor
 			voxelMap.voxelUpperBlocks = go;
 		}
 
+		if (voxelMap.voxelCharacter == null) {
+			GameObject go = new GameObject ("voxelCharacter");
+			go.transform.SetParent (voxelMap.transform);
+			go.transform.position = Vector3.zero;
+
+			VoxelCharacter voxelCharacter = go.AddComponent<VoxelCharacter> ();
+			voxelCharacter.voxelUpperBlocks = voxelMap.voxelUpperBlocks.GetComponent<VoxelBlocks> ();
+			voxelCharacter.voxelLowerBlocks = voxelMap.voxelLowerBlocks.GetComponent<VoxelBlocks> ();
+			voxelCharacter.parentBlocks = voxelMap;
+
+			voxelMap.voxelCharacter = go;
+		}
+
 		//重新计算gizmo中方块的大小，并且新建一个笔刷
 		if (voxelMap.basicBlock != null) {
 			UpdateCalculations ();
@@ -208,9 +217,15 @@ public class VoxelMapEditor : Editor
 			//移动笔刷所在的位置
 			MoveBrush ();
 
+
 			//进行绘制或移除
 			if (voxelMap.basicBlock != null && mouseOnMap) {
 				Event current = Event.current;
+				if (current.Equals (Event.KeyboardEvent ("j"))) {
+					Debug.Log ("asdaadsads");
+					RotateModel (1);
+				}
+
 				if (current.shift) {
 					Draw ();
 				}
@@ -220,8 +235,10 @@ public class VoxelMapEditor : Editor
 			}
 		}
 	}
-
-
+	void RotateModel (int direction)
+	{
+		brush.transform.Rotate (new Vector3 (0, 90 * direction, 0));
+	}
 	//重新计算方块的尺寸，以便重新绘制gizmo
 	void UpdateCalculations ()
 	{
@@ -293,11 +310,11 @@ public class VoxelMapEditor : Editor
 
 		//鼠标击中的位置需要重新转化为父对象的坐标，防止父对象的移动导致的错位
 		mouseHit = voxelMap.transform.InverseTransformPoint (hit);
-        
-    }
 
-    //移动笔刷所在的位置
-    void MoveBrush ()
+	}
+
+	//移动笔刷所在的位置
+	void MoveBrush ()
 	{
 		Vector3 blockSize = voxelMap.GetBlockSize ();
 
@@ -309,8 +326,8 @@ public class VoxelMapEditor : Editor
 		float row = x / blockSize.x;
 		float column = Mathf.Abs (z / blockSize.z) - 1;
 
-        //如果鼠标不再屏幕上，直接返回
-        if (!mouseOnMap)
+		//如果鼠标不再屏幕上，直接返回
+		if (!mouseOnMap)
 			return;
 
 		//根据逻辑位置计算ID
@@ -347,6 +364,7 @@ public class VoxelMapEditor : Editor
 		float posX = brush.transform.position.x;
 		float posY = brush.transform.position.y;
 		float poxZ = brush.transform.position.z;
+		Quaternion rotate = brush.transform.localRotation;
 		Debug.Log ("voxelMap.name: " + voxelMap.name);
 
 		if (voxelMap.displayUpperGizmo) {
@@ -358,6 +376,7 @@ public class VoxelMapEditor : Editor
 				block = new GameObject ("block_" + id);
 				block.transform.SetParent (voxelMap.voxelUpperBlocks.transform);
 				block.transform.position = new Vector3 (posX, posY, poxZ);
+				block.transform.localRotation = rotate;
 				block.AddComponent<MeshFilter> ();
 				block.AddComponent<MeshRenderer> ();
 				block.AddComponent<BasicEntity> ();
@@ -392,6 +411,8 @@ public class VoxelMapEditor : Editor
 				block = new GameObject ("block_" + id);
 				block.transform.SetParent (voxelMap.voxelLowerBlocks.transform);
 				block.transform.position = new Vector3 (posX, posY, poxZ);
+				block.transform.localRotation = rotate;
+
 				block.AddComponent<MeshFilter> ();
 				block.AddComponent<MeshRenderer> ();
 				block.AddComponent<BasicEntity> ();

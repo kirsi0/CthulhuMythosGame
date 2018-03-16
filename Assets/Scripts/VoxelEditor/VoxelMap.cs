@@ -8,13 +8,15 @@ public class VoxelMap : MonoBehaviour
 	//地图尺寸，以方块为单位
 	public Vector2 mapSize = new Vector2 (20, 10);
 	//基础方块尺寸
-	private Vector3 blockSize = new Vector3 (2, 2, 2);
+	public Vector3 blockSize = new Vector3 (2, 2, 2);
 	//基础方块
 	public GameObject basicBlock;
 	//存储block和位置的对应信息
 	public GameObject voxelLowerBlocks;
 	//存储上层的方块和位置的对应信息
 	public GameObject voxelUpperBlocks;
+	//存储上层的角色信息
+	public GameObject voxelCharacter;
 	//储存所有会使用到的方块
 	public List<BasicBlock> allBlocks = new List<BasicBlock> ();
 
