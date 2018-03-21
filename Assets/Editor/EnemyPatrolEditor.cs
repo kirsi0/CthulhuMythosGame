@@ -99,6 +99,7 @@ public class EnemyPatrolEditor : Editor
 
 			m_patrolData = m_prop.gameObject.AddComponent<PatrolData> ();
 			m_patrolData.m_voxelMap = GameObject.Find ("Voxel Map").GetComponent<VoxelMap> ();
+			m_patrolData.m_patrolPoint = new List<Vector3> ();
 		} else {
 
 			m_patrolData = m_prop.GetComponent<PatrolData> ();
@@ -135,7 +136,7 @@ public class EnemyPatrolEditor : Editor
 
 		float x = logicPos.x * m_patrolData.m_voxelMap.blockSize.x + offset.x + parentPos.x;
 		float y = parentPos.y;
-		float z = -(logicPos.z * m_patrolData.m_voxelMap.blockSize.z + offset.z) + parentPos.z;
+		float z = -(logicPos.y * m_patrolData.m_voxelMap.blockSize.z + offset.z) + parentPos.z;
 
 		GameObject go = GameObject.Instantiate (m_patrolData.m_referent, m_prop.transform);
 		go.name = "x:" + logicPos.x + " y:" + logicPos.y + " z:" + logicPos.z;
